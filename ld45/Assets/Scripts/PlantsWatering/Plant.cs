@@ -7,6 +7,8 @@ public class Plant : MonoBehaviour
 {
     public bool state = true;
     public bool isDone;
+    public bool isFocused;
+    public GameObject focusEffect;
     public int waterLevel = 1;
     public int maxWaterLevel = 5;
 
@@ -25,13 +27,14 @@ public class Plant : MonoBehaviour
             _plantsWateringManager.plantsToWater++;
     }
 
-    private void Update()
+    public void AddWater()
     {
-       
-    }
+        if (!isFocused) return;
+        if (!state){
+            Dead();
+            return;
+        }
 
-    private void AddWater()
-    {
         if (waterLevel >= maxWaterLevel) 
             return;
        
@@ -40,6 +43,18 @@ public class Plant : MonoBehaviour
 
         //UpdateSprite
         _spiteRenderer.color = new Color(_spiteRenderer.color.r + .1f, _spiteRenderer.color.g + .1f, _spiteRenderer.color.b + .1f);
+    }
+
+    public void Focus()
+    {
+        isFocused = true;
+        focusEffect.SetActive(true);
+    }
+
+    public void UnFocus()
+    {
+        isFocused = false;
+        focusEffect.SetActive(false);
     }
 
     private void Done()
@@ -55,11 +70,11 @@ public class Plant : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (!_plantsWateringManager.isPlaying) return;
+        //if (!_plantsWateringManager.isPlaying) return;
 
-        if (state)
-            AddWater();
-        else
-            Dead();
+        //if (state)
+        //    AddWater();
+        //else
+        //    Dead();
     }
 }
