@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8115882333019430022}
   - component: {fileID: 3732160443064694902}
   - component: {fileID: 6217109913476981540}
+  - component: {fileID: 9040082618409887380}
   m_Layer: 0
   m_Name: Note
-  m_TagString: Untagged
+  m_TagString: SingingNote
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9be1a21e554194af689c5aa37ecdcbb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isDone: 0
   sprites:
   - {fileID: 21300000, guid: f5c254b62d2cbbb43b70d7ea47dc4dff, type: 3}
   - {fileID: 21300000, guid: be518809682d05f4789931e5793096e6, type: 3}
@@ -109,3 +111,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 2230624b75ab47f438f0394cd8959434, type: 3}
   - {fileID: 21300000, guid: 19476cd6a6e81e14298eace5c9b14014, type: 3}
   - {fileID: 21300000, guid: 315fd92e0a54e594f94d8f9d6d645459, type: 3}
+--- !u!58 &9040082618409887380
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377064996294288812}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.2

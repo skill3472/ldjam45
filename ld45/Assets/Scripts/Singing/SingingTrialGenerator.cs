@@ -14,6 +14,7 @@ public class SingingTrialGenerator : MonoBehaviour
 
 	public List<Vector2> trialPoints;
     public Note note;
+    public List<Note> notes;
 
     private LineRenderer _lineRenderer;
     private EdgeCollider2D _edgeCollider;
@@ -35,7 +36,7 @@ public class SingingTrialGenerator : MonoBehaviour
 
 
         foreach (Vector2 pos in trialPoints)
-            Instantiate(note, pos, Quaternion.identity);
+            notes.Add(Instantiate(note, pos, Quaternion.identity));
     }
 
     void Update()
