@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NotesControlling : MonoBehaviour
 {
+    public GameController gameManager;
     public SingingTrialGenerator singingTrialGenerator;
     public PointsCounter pointsCounter;
 
@@ -67,7 +68,13 @@ public class NotesControlling : MonoBehaviour
     public void Win()
     {
         isPlaying = false;
+        Invoke("EndGame", 0.3f);
         Debug.Log("WIN");
+    }
+
+    private void EndGame()
+    {
+        gameManager.GameEnd();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
