@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlantRowManager : MonoBehaviour
 {
-    public Transform gameOverTestSprite;
-
     public List<Transform> plantsPoints;
     public List<Plant> plantsTypes;
 
@@ -17,12 +15,6 @@ public class PlantRowManager : MonoBehaviour
     private void Update()
     {
         
-    }
-
-    public void GameOver()
-    {
-        Instantiate(gameOverTestSprite, transform);
-        Time.timeScale = 0;
     }
 
     private void SpawnPlants()
