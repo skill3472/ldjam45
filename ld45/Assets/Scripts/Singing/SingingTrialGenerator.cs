@@ -12,6 +12,7 @@ public class SingingTrialGenerator : MonoBehaviour
     public Vector2 noteMargin;
 
 	public List<Vector3> trialPoints;
+    public Note note;
 
     private LineRenderer _lineRenderer;
 
@@ -26,6 +27,8 @@ public class SingingTrialGenerator : MonoBehaviour
         _lineRenderer.positionCount = (int)_pointsCount;
         _lineRenderer.SetPositions(trialPoints.ToArray());
 
+        foreach (Vector2 pos in trialPoints)
+            Instantiate(note, pos, Quaternion.identity);
     }
 
     void Update()
