@@ -11,6 +11,7 @@ public class meditating : MonoBehaviour
 	public GameObject thought;
 	public float LocalDifficulty;
 	public int points;
+	public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class meditating : MonoBehaviour
         	timeBeforeNextSpawn = 2 / LocalDifficulty;
         	SpawnThought();
         }
+        scoreText.text = points.ToString();
     }
 
     public void SpawnThought()
