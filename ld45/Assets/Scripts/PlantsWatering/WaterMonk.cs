@@ -13,10 +13,6 @@ public class WaterMonk : MonoBehaviour
 
     private int _dir = -1;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if (transform.position.x > maxLeftMove.position.x && _dir < 0)
