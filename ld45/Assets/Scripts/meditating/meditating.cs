@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class meditating : MonoBehaviour
 {
+    public GameController gameManager;
 
 	public Transform[] spawnpoints;
 	public float timeBeforeNextSpawn;
@@ -55,6 +56,11 @@ public class meditating : MonoBehaviour
         //
         //
         //Show score, splash screen, ect. HERE
-        SceneManager.LoadScene(1);
+        Invoke("EndGame", 0.3f);
+    }
+
+    private void EndGame()
+    {
+        gameManager.GameEnd();
     }
 }

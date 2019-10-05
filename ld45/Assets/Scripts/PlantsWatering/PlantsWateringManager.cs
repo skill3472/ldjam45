@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlantsWateringManager : MonoBehaviour
 {
+    public GameController gameManger;
     public bool isPlaying = true;
 
     public int plantsToWater;
@@ -33,21 +33,19 @@ public class PlantsWateringManager : MonoBehaviour
     {
         if (!isPlaying) return;
         Instantiate(winTestSprite, transform);
-        GameEnd();
+        Invoke("GameEnd", 0.3f);
     }
 
     public void GameOver()
     {
         if (!isPlaying) return;
         Instantiate(gameOverTestSprite, transform);
-        GameEnd();
+        Invoke("GameEnd", 0.3f);
     }
 
     private void GameEnd()
     {
-        Time.timeScale = 0;
-        isPlaying = false;
-        SceneManager.LoadScene(2);
+        gameManger.GameEnd();
     }
 
 }
