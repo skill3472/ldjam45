@@ -38,6 +38,7 @@ public class Plant : MonoBehaviour
         if(waterLevel == maxWaterLevel)
         {
             waterLevel = 1;
+            _plantsWateringManager.plantsToWater++;
         }
 
         if (waterLevel > maxWaterLevel)

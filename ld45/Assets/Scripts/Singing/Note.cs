@@ -7,6 +7,8 @@ public class Note : MonoBehaviour
 {
     public bool isDone;
 
+    public float speed = 4;
+
     public ParticleSystem doneEffect;
 
     public List<Sprite> sprites;
@@ -19,6 +21,11 @@ public class Note : MonoBehaviour
         _pointsCounter = FindObjectOfType<PointsCounter>();
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _spriteRenderer.sprite = sprites[Random.Range(0, sprites.Count)];
+    }
+
+    private void Update()
+    {
+        transform.position -= new Vector3(Time.deltaTime * speed, 0, 0);
     }
 
     public void Done(float time, int points)
