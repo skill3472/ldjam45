@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b440a1f66720544c7b691ef305cd6980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxBadPlants: 2
   plantsPoints:
   - {fileID: 808182092}
   - {fileID: 1611527641}
@@ -236,8 +237,8 @@ MonoBehaviour:
   - {fileID: 232646081}
   - {fileID: 2056095860}
   plantsTypes:
-  - {fileID: 3989758478006679105, guid: be1a54a9b0ddb4d7295c3b43bd473469, type: 3}
   - {fileID: 3387934888576521301, guid: 2fc3bf2bda882462dbfb3c0e3fe663ab, type: 3}
+  - {fileID: 3989758478006679105, guid: be1a54a9b0ddb4d7295c3b43bd473469, type: 3}
 --- !u!114 &296347280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +436,11 @@ PrefabInstance:
     - target: {fileID: 6514710058575414332, guid: be1a54a9b0ddb4d7295c3b43bd473469,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989758478006679105, guid: be1a54a9b0ddb4d7295c3b43bd473469,
+        type: 3}
+      propertyPath: state
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -724,7 +730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualPlant: {fileID: 1701620545}
-  speed: 5
+  speed: 4.5
+  speedingUp: 1.5
   maxLeftMove: {fileID: 1309878672}
   maxRightMove: {fileID: 286853559}
 --- !u!50 &2075352670

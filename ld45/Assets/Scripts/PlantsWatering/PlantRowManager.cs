@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class PlantRowManager : MonoBehaviour
 {
+    public int maxBadPlants = 2;
     public List<Transform> plantsPoints;
+    //First plant is the bad one!
     public List<Plant> plantsTypes;
+
 
     private void Start()
     {
@@ -14,7 +17,15 @@ public class PlantRowManager : MonoBehaviour
 
     private void SpawnPlants()
     {
-        foreach(Transform t in plantsPoints)
-            Instantiate(plantsTypes[Random.Range(0, plantsTypes.Count)], t);
+        foreach (Transform t in plantsPoints)
+        {
+            if (Random.Range(0, 2) == 1 && maxBadPlants > 0)
+            {
+                Instantiate(plantsTypes[0], t);
+                maxBadPlants--;
+            }
+            else
+                Instantiate(plantsTypes[Random.Range(1, plantsTypes.Count)], t);
+        }
     }
 }

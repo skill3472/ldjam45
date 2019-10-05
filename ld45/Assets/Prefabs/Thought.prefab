@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4497716757129383518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 8, z: 1}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -96,6 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeft: 0
+  thoughtsPossible:
+  - {fileID: 21300000, guid: 379f73d8e17a41a4fb0d72894a7e73ca, type: 3}
+  - {fileID: 21300000, guid: 96a5d8d32829c544da712c2016228587, type: 3}
+  - {fileID: 21300000, guid: 8cb689142489c8b478508fb81e6bf610, type: 3}
+  - {fileID: 21300000, guid: 5b697fdfabe1f0d4fa5ae0dd8469cc3c, type: 3}
+  - {fileID: 21300000, guid: 267232f4ef2c54e49b4491984d5e8923, type: 3}
+  - {fileID: 21300000, guid: f689ce2b200b88a43a24fbea58777f2b, type: 3}
+  - {fileID: 21300000, guid: 5e3485c980ef2d544b41478306c77849, type: 3}
+  - {fileID: 21300000, guid: 7cb0035bfaf5aec41b5ea573df558d13, type: 3}
 --- !u!61 &6769310684989075877
 BoxCollider2D:
   m_ObjectHideFlags: 0
