@@ -194,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168761926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.271285, y: -0.84, z: 0}
+  m_LocalPosition: {x: 4.91, y: -0.84, z: 0}
   m_LocalScale: {x: 9.052092, y: 9.052092, z: 9.052092}
   m_Children: []
   m_Father: {fileID: 0}
@@ -425,7 +425,7 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 90
     numCapVertices: 30
     alignment: 0
     textureMode: 0
@@ -727,7 +727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858441707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.13, y: -0.9958543, z: 0}
+  m_LocalPosition: {x: -6.18, y: 3.05, z: 0}
   m_LocalScale: {x: 5.6444, y: 5.6444, z: 5.6444}
   m_Children: []
   m_Father: {fileID: 0}

@@ -35,7 +35,8 @@ public class SingingTrialGenerator : MonoBehaviour
 
     private void CreateRandomPoints()
 	{
-        trialPoints.Add(GetNextPoint(xMaxLine.x));
+        trialPoints.Add(new Vector2(xMaxLine.x,
+            yOfEachLine[Random.Range(0, yOfEachLine.Count)]));
         for (int i = 1; i < _pointsCount; i++)
             trialPoints.Add(GetNextPoint(trialPoints[i - 1].x));
 	}
