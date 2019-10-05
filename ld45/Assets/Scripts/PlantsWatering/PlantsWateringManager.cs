@@ -8,8 +8,18 @@ public class PlantsWateringManager : MonoBehaviour
 
     public int plantsToWater;
 
+    public WaterMonk monk;
+
     public Transform winTestSprite;
     public Transform gameOverTestSprite;
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            monk.actualPlant.AddWater();
+        }
+    }
 
     public void PlantWaterd()
     {
@@ -37,4 +47,5 @@ public class PlantsWateringManager : MonoBehaviour
         Time.timeScale = 0;
         isPlaying = false;
     }
+
 }
