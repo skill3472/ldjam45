@@ -35,8 +35,15 @@ public class Plant : MonoBehaviour
             return;
         }
 
-        if (waterLevel >= maxWaterLevel) 
+        if(waterLevel == maxWaterLevel)
+        {
+            waterLevel = 1;
+        }
+
+        if (waterLevel > maxWaterLevel)
+        {
             return;
+        }
        
         waterLevel++;
         if (waterLevel >= maxWaterLevel) Done();
