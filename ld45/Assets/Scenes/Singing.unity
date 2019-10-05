@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4341cfe86162d4afba92cd4c6acc57fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesToGenerate: 30
+  notesToGenerate: 5
   notesSpeed: 1
   notesSpeedingUp: 0.06
   xMax: {x: -3.96, y: 8.38}
@@ -1115,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588118816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.58, y: 2.61, z: 0}
+  m_LocalPosition: {x: -3.58, y: 2.61, z: 0}
   m_LocalScale: {x: 1, y: 5.331563, z: 1}
   m_Children: []
   m_Father: {fileID: 464579510}
