@@ -7,17 +7,12 @@ public class thoughtCtrl : MonoBehaviour
 {
 	private GameObject gm;
 	[SerializeField]
-	private Text thoughtText;
-	public string[] possibleThoughts;
-	[SerializeField]
 	private bool isLeft;
 	//public float movementTick;
 
     // Start is called before the first frame update
     void Start()
     {
-    	thoughtText = this.gameObject.transform.GetChild(0).GetComponent<Text>();
-    	thoughtText.text = possibleThoughts[(int) Mathf.Round(Random.Range(0,5))];
     	gm = GameObject.Find("_GM");
         //Checking which way the thought should be heading
         if(transform.position.x > 0)
