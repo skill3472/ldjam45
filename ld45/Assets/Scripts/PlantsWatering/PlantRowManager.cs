@@ -12,11 +12,6 @@ public class PlantRowManager : MonoBehaviour
         SpawnPlants();
     }
 
-    private void Update()
-    {
-        
-    }
-
     private void SpawnPlants()
     {
         foreach(Transform t in plantsPoints)

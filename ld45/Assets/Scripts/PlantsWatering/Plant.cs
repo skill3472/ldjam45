@@ -19,6 +19,7 @@ public class Plant : MonoBehaviour
         _spiteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _plantsWateringManager = FindObjectOfType<PlantsWateringManager>();
 
+        waterLevel = Random.Range(2, 4);
 
         if(state)
             _plantsWateringManager.plantsToWater++;
@@ -55,6 +56,7 @@ public class Plant : MonoBehaviour
     private void OnMouseDown()
     {
         if (!_plantsWateringManager.isPlaying) return;
+
         if (state)
             AddWater();
         else
