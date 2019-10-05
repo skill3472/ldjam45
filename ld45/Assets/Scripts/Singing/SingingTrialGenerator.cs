@@ -16,21 +16,16 @@ public class SingingTrialGenerator : MonoBehaviour
     public Note note;
     public List<Note> notes;
 
-    private LineRenderer _lineRenderer;
     private EdgeCollider2D _edgeCollider;
 
     private float _pointsCount;
 
     void Start()
     {
-        _lineRenderer = gameObject.GetComponent<LineRenderer>();
         _edgeCollider = gameObject.GetComponent<EdgeCollider2D>();
         _pointsCount = Random.Range(pointsCountMaxs.x, pointsCountMaxs.y);
 
         CreateRandomPoints();
-
-        //_lineRenderer.positionCount = (int)_pointsCount;
-        //_lineRenderer.SetPositions(trialPoints.ToArray());
 
         _edgeCollider.points = trialPoints.ToArray();
 

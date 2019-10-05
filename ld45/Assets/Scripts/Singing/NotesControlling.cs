@@ -8,8 +8,12 @@ public class NotesControlling : MonoBehaviour
 
     public bool isOnTrial;
 
+    public int pointsPerNote;
+
     public Note actualNote;
     public Note lastDoneNote;
+
+    private float timeFromLastNote;
     
     private void Start()
     {
@@ -22,20 +26,24 @@ public class NotesControlling : MonoBehaviour
         mousePos.z = 10;
         transform.position = Camera.main.ScreenToWorldPoint(mousePos);
 
+        timeFromLastNote += Time.deltaTime;
+
         if (Input.GetMouseButtonDown(0)){
             if (actualNote != null){
                 if (lastDoneNote != null){
                     if (singingTrialGenerator.notes.IndexOf(lastDoneNote)
                         == singingTrialGenerator.notes.IndexOf(actualNote) - 1)
                     {
-                        actualNote.Done();
+                        actualNote.Done(timeFromLastNote, pointsPerNote);
+                        timeFromLastNote = 0;
                         lastDoneNote = actualNote;
                     }
                     else
                         MissClick();
                 }else {
                     if (singingTrialGenerator.notes.IndexOf(actualNote) == 0){
-                        actualNote.Done();
+                        actualNote.Done(timeFromLastNote, pointsPerNote);
+                        timeFromLastNote = 0;
                         lastDoneNote = actualNote;
                     }
                     else
@@ -57,11 +65,13 @@ public class NotesControlling : MonoBehaviour
         if (collision.gameObject.CompareTag("SingingTrial"))
         {
             isOnTrial = true;
-            Debug.Log("GOT ON TRIAL");
         }else
         if (collision.gameObject.CompareTag("SingingNote"))
         {
+            if(actualNote != null)
+                actualNote.FocusOff();
             actualNote = collision.gameObject.GetComponent<Note>();
+            actualNote.FocusOn();
         }
     }
 
@@ -71,6 +81,8 @@ public class NotesControlling : MonoBehaviour
             Debug.Log("LEFT THE TRIAL");
         else if (collision.gameObject.CompareTag("SingingNote"))
         {
+            if(actualNote != null)
+                actualNote.FocusOff();
             actualNote = null;
         }
     }
