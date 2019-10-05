@@ -22,14 +22,12 @@ public class thoughtCtrl : MonoBehaviour
 
     void Update()
     {
-
     	transform.Translate(transform.right * Time.deltaTime * (isLeft ? 2 : -2));
-    	 
     }
 
     void OnMouseDown()
     {
-        FindObjectOfType<PointsCounter>().AddPoints(100);
+        gm.GetComponent<meditating>().AddPoints(100);
     	Destroy(gameObject);
     }
 

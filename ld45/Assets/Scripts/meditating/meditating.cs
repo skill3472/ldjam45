@@ -20,7 +20,6 @@ public class meditating : MonoBehaviour
     {
         lives = 3;
     	points = 0;
-        timeBeforeNextSpawn = 5f;
         LocalDifficulty = 1f;
     }
 
@@ -47,16 +46,19 @@ public class meditating : MonoBehaviour
     public void Loose()
     {
         Debug.Log("u r dead");
-        //Show score, splash screen, ect. HERE
-        //
-        //
-        //Show score, splash screen, ect. HERE
+
         Invoke("EndGame", 0.3f);
     }
 
     private void EndGame()
     {
         gameManager.GameEnd();
+    }
+
+    public void AddPoints(int amount)
+    {
+        points += amount;
+        pointsCounter.AddPoints(amount);
     }
 
 }

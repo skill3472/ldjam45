@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1632952355}
-  pointsCounter: {fileID: 0}
+  pointsCounter: {fileID: 1632952356}
   spawnpoints:
   - {fileID: 370164081}
   - {fileID: 861225929}
@@ -953,7 +953,7 @@ MonoBehaviour:
   - {fileID: 1263146178}
   - {fileID: 1777200609}
   - {fileID: 654651881}
-  timeBeforeNextSpawn: 5
+  timeBeforeNextSpawn: 2
   thought: {fileID: 4497716757129383518, guid: 1d9a1fa056857324f915d4923710241b, type: 3}
   LocalDifficulty: 1
   points: 0
