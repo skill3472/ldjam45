@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlantsWateringManager : MonoBehaviour
 {
     public GameController gameManger;
+    public PointsCounter pointsCounter;
+    public int pointsPerWaterdPlant = 100;
     public bool isPlaying = true;
 
     public int plantsToWater;
@@ -25,6 +27,7 @@ public class PlantsWateringManager : MonoBehaviour
     public void PlantWaterd()
     {
         plantsToWater--;
+        pointsCounter.AddPoints(pointsPerWaterdPlant);
         if (plantsToWater <= 0)
             Win();
     }

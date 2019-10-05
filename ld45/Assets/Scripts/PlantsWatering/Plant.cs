@@ -39,6 +39,7 @@ public class Plant : MonoBehaviour
         {
             waterLevel = 1;
             _plantsWateringManager.plantsToWater++;
+            _plantsWateringManager.pointsCounter.AddPoints(-50);
         }
 
         if (waterLevel > maxWaterLevel)
@@ -47,6 +48,7 @@ public class Plant : MonoBehaviour
         }
        
         waterLevel++;
+        _plantsWateringManager.pointsCounter.AddPoints(20);
         if (waterLevel >= maxWaterLevel) Done();
 
         //UpdateSprite
