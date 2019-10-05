@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlantsWatering/WaterMonk.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameController.cs">
     <Files>
       <File FileName="Assets/Scripts/Singing/Note.cs" Line="51" Column="6" />
       <File FileName="Assets/Scripts/PointsCounter.cs" Line="27" Column="33" />
@@ -7,7 +7,8 @@
       <File FileName="Assets/Scripts/Singing/SingingTrialGenerator.cs" Line="18" Column="45" />
       <File FileName="Assets/Scripts/Singing/NotesEndOfLine.cs" Line="25" Column="17" />
       <File FileName="Assets/Scripts/PlantsWatering/PlantsWateringManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="23" Column="13" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="7" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,10 +16,9 @@
           <Node name="ld45" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlantsWatering" expanded="True">
-                  <Node name="WaterMonk.cs" selected="True" />
-                </Node>
+                <Node name="PlantsWatering" expanded="True" />
                 <Node name="Singing" expanded="True" />
+                <Node name="GameController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
