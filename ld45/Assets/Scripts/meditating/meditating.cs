@@ -12,10 +12,12 @@ public class meditating : MonoBehaviour
 	public float LocalDifficulty;
 	public int points;
 	public Text scoreText;
+    public int lives;
 
     // Start is called before the first frame update
     void Start()
     {
+        lives = 3;
     	points = 0;
         timeBeforeNextSpawn = 5f;
         LocalDifficulty = 1f;
@@ -32,10 +34,22 @@ public class meditating : MonoBehaviour
         	SpawnThought();
         }
         scoreText.text = points.ToString();
+
+        //Detecting death
+        if(lives <= 0)
+        {
+            Loose();
+        }
     }
 
     public void SpawnThought()
     {
     	Instantiate(thought, spawnpoints[(int) Mathf.Round(Random.Range(0,6))].position, transform.rotation);
+    }
+
+    public void Loose()
+    {
+        Debug.Log("u r dead");
+        //Show score, get to next scene, ect.
     }
 }

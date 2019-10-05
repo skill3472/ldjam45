@@ -46,4 +46,13 @@ public class thoughtCtrl : MonoBehaviour
     	gm.GetComponent<meditating>().points++;
     	GameObject.Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.tag == "Head")
+        {
+            gm.GetComponent<meditating>().lives--;
+            GameObject.Destroy(gameObject);
+        }
+    }
 }
