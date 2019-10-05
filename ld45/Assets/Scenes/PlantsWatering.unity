@@ -730,8 +730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualPlant: {fileID: 1701620545}
-  speed: 5
-  speedingUp: 2
+  speed: 4.5
+  speedingUp: 1.5
   maxLeftMove: {fileID: 1309878672}
   maxRightMove: {fileID: 286853559}
 --- !u!50 &2075352670
