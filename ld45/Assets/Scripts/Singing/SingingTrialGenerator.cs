@@ -14,8 +14,10 @@ public class SingingTrialGenerator : MonoBehaviour
 	public List<Vector3> trialPoints;
 
     private LineRenderer _lineRenderer;
+    private List<float> yList;
 
-	private float _pointsCount;
+
+    private float _pointsCount;
 
     void Start()
     {
@@ -35,13 +37,15 @@ public class SingingTrialGenerator : MonoBehaviour
 
     private void CreateRandomPoints()
 	{
-        trialPoints.Add(GetNextPoint(xMaxLine.x));
+        trialPoints.Add(new Vector2(xMaxLine.x,
+            yOfEachLine[Random.Range(0, yOfEachLine.Count)]));
         for (int i = 1; i < _pointsCount; i++)
             trialPoints.Add(GetNextPoint(trialPoints[i - 1].x));
 	}
 
     private Vector2 GetNextPoint(float lastX)
     {
+
         return new Vector2(lastX + Random.Range(noteMargin.x, noteMargin.y),
             yOfEachLine[Random.Range(0, yOfEachLine.Count)]);
     }
