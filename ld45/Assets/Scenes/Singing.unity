@@ -318,8 +318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   singingTrialGenerator: {fileID: 464579511}
+  pointsCounter: {fileID: 168745273}
   isOnTrial: 0
   pointsPerNote: 100
+  minusPointsPerMissClick: 100
   actualNote: {fileID: 0}
   lastDoneNote: {fileID: 0}
 --- !u!58 &87151266

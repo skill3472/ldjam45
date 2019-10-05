@@ -24,7 +24,7 @@ public class PointsCounter : MonoBehaviour
 
     public void AddPoints(int amount)
     {
-        points += amount;
+        points += amount * combo;
         SetText();
     }
 

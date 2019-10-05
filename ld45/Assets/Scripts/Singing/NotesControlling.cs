@@ -5,10 +5,12 @@ using UnityEngine;
 public class NotesControlling : MonoBehaviour
 {
     public SingingTrialGenerator singingTrialGenerator;
+    public PointsCounter pointsCounter;
 
     public bool isOnTrial;
 
     public int pointsPerNote;
+    public int minusPointsPerMissClick;
 
     public Note actualNote;
     public Note lastDoneNote;
@@ -57,7 +59,7 @@ public class NotesControlling : MonoBehaviour
 
     private void MissClick()
     {
-        Debug.Log("MISS CLICK");
+        pointsCounter.AddPoints(-minusPointsPerMissClick);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
