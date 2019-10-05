@@ -8,11 +8,13 @@ public class thoughtCtrl : MonoBehaviour
 	private GameObject gm;
 	[SerializeField]
 	private bool isLeft;
+    public Sprite[] thoughtsPossible;
 	//public float movementTick;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[(int) Mathf.Round(Random.Range(0,8))];
     	gm = GameObject.Find("_GM");
         //Checking which way the thought should be heading
         if(transform.position.x > 0)
