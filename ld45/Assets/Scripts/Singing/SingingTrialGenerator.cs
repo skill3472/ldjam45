@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
+[RequireComponent(typeof(LineRenderer))]
 public class SingingTrialGenerator : MonoBehaviour
 {
 	public Vector2 pointsCountMaxs;
@@ -11,21 +12,27 @@ public class SingingTrialGenerator : MonoBehaviour
     public Vector2 xMaxLine;
     public Vector2 noteMargin;
 
-	public List<Vector3> trialPoints;
+	public List<Vector2> trialPoints;
     public Note note;
 
     private LineRenderer _lineRenderer;
+    private EdgeCollider2D _edgeCollider;
 
-	private float _pointsCount;
+    private float _pointsCount;
 
     void Start()
     {
         _lineRenderer = gameObject.GetComponent<LineRenderer>();
-		_pointsCount = Random.Range(pointsCountMaxs.x, pointsCountMaxs.y);
+        _edgeCollider = gameObject.GetComponent<EdgeCollider2D>();
+        _pointsCount = Random.Range(pointsCountMaxs.x, pointsCountMaxs.y);
 
         CreateRandomPoints();
-        _lineRenderer.positionCount = (int)_pointsCount;
-        _lineRenderer.SetPositions(trialPoints.ToArray());
+
+        //_lineRenderer.positionCount = (int)_pointsCount;
+        //_lineRenderer.SetPositions(trialPoints.ToArray());
+
+        _edgeCollider.points = trialPoints.ToArray();
+
 
         foreach (Vector2 pos in trialPoints)
             Instantiate(note, pos, Quaternion.identity);
