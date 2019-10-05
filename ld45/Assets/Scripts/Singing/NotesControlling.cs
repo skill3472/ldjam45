@@ -8,6 +8,7 @@ public class NotesControlling : MonoBehaviour
     public PointsCounter pointsCounter;
 
     public bool isOnTrial;
+    public bool isPlaying;
 
     public int pointsPerNote;
     public int minusPointsPerMissClick;
@@ -19,11 +20,12 @@ public class NotesControlling : MonoBehaviour
     
     private void Start()
     {
-        
+        isPlaying = true;
     }
 
     private void Update()
     {
+        if (!isPlaying) return;
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
         transform.position = Camera.main.ScreenToWorldPoint(mousePos);
@@ -54,6 +56,9 @@ public class NotesControlling : MonoBehaviour
             }else
                 MissClick();
         }
+
+        if (singingTrialGenerator.notes.IndexOf(lastDoneNote) == singingTrialGenerator.notes.Count - 1)
+            Win();
             
     }
 
@@ -62,8 +67,14 @@ public class NotesControlling : MonoBehaviour
         pointsCounter.AddPoints(-minusPointsPerMissClick);
     }
 
+    private void Win()
+    {
+        isPlaying = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!isPlaying) return;
         if (collision.gameObject.CompareTag("SingingTrial"))
         {
             isOnTrial = true;
@@ -79,6 +90,7 @@ public class NotesControlling : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        if (!isPlaying) return;
         if (collision.gameObject.CompareTag("SingingTrial"))
             Debug.Log("LEFT THE TRIAL");
         else if (collision.gameObject.CompareTag("SingingNote"))
@@ -91,6 +103,6 @@ public class NotesControlling : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        if (!isPlaying) return;
     }
 }
