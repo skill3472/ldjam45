@@ -7,6 +7,7 @@ public class WaterMonk : MonoBehaviour
     public Plant actualPlant;
 
     public float speed;
+    public float speedingUp;
 
     public Transform maxLeftMove;
     public Transform maxRightMove;
@@ -25,6 +26,7 @@ public class WaterMonk : MonoBehaviour
             transform.position += new Vector3(Time.deltaTime * speed, 0);
             if (transform.position.x >= maxRightMove.position.x) _dir = -1;
         }
+        speed += Time.deltaTime * speedingUp;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
