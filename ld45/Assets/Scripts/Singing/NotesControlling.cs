@@ -56,20 +56,18 @@ public class NotesControlling : MonoBehaviour
             }else
                 MissClick();
         }
-
-        if (singingTrialGenerator.notes.IndexOf(lastDoneNote) == singingTrialGenerator.notes.Count - 1)
-            Win();
             
     }
 
     private void MissClick()
     {
-        pointsCounter.AddPoints(-minusPointsPerMissClick);
+        //pointsCounter.AddPoints(-minusPointsPerMissClick);
     }
 
-    private void Win()
+    public void Win()
     {
         isPlaying = false;
+        Debug.Log("WIN");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

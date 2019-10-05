@@ -31,8 +31,6 @@ public class Note : MonoBehaviour
     public void Done(float time, int points)
     {
         isDone = true;
-        //Some effect
-        Debug.Log("DONE!");
         Instantiate(doneEffect, transform);
 
         if (time <= .5f) _pointsCounter.AddCombo();

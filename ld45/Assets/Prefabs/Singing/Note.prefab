@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDone: 0
+  speed: 5
   doneEffect: {fileID: 1278776879013088399, guid: 173ae8e1f7ad248b8a0599d65f72fe6d,
     type: 3}
   sprites:

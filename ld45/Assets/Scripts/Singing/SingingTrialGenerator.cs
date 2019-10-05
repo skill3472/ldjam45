@@ -2,50 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LineRenderer))]
-[RequireComponent(typeof(LineRenderer))]
 public class SingingTrialGenerator : MonoBehaviour
 {
-    public Vector2 randomMargin;
+    public int notesToGenerate = 30;
+    public float notesSpeed;
+    public float notesSpeedingUp;
+    public Vector2 xMax;
+    public Vector2 randomXMargin;
     public Note note;
 
     public List<float> yOfEachLine;
-    public Vector2 xMaxLine;
-    public Vector2 noteMargin;
 
     public List<Note> notes;
 
-
+    public NotesControlling notesControlling;
     private float _margin;
 
     void Start()
     {
         SetRandomMargin();
+        SpawnNote();
     }
 
     void Update()
     {
-        if (notes[notes.Count - 1].transform.position.x <= xMaxLine.y - _margin)
+        if (!notesControlling.isPlaying) return;
+        if (notes[notes.Count - 1].transform.position.x <= xMax.y - _margin)
         {
             SpawnNote();
             SetRandomMargin();
         }
+        notesSpeed += Time.deltaTime * notesSpeedingUp;
     }
 
 
     private Vector2 GetPoint()
     {
-        return new Vector2(noteMargin.y,
-            yOfEachLine[Random.Range(0, yOfEachLine.Count)]);
+        return new Vector2(xMax.y,
+            yOfEachLine[Random.Range(0, yOfEachLine.Count-1)]);
     }
 
     private void SpawnNote()
     {
-        notes.Add(Instantiate(note, GetPoint(), Quaternion.identity));
+        if (notesToGenerate <= 0) return;
+        Note newNote = Instantiate(note, GetPoint(), Quaternion.identity);
+        newNote.speed *= notesSpeed;
+        notes.Add(newNote);
+        notesToGenerate--;
     }
 
     private void SetRandomMargin()
     {
-        _margin = Random.Range(randomMargin.x, randomMargin.y);
+        _margin = Random.Range(randomXMargin.x, randomXMargin.y);
     }
 }
