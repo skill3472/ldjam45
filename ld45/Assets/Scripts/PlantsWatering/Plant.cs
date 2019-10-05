@@ -56,6 +56,7 @@ public class Plant : MonoBehaviour
     private void OnMouseDown()
     {
         if (!_plantsWateringManager.isPlaying) return;
+
         if (state)
             AddWater();
         else

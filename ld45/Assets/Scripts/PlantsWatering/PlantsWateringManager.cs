@@ -10,15 +10,6 @@ public class PlantsWateringManager : MonoBehaviour
 
     public Transform winTestSprite;
     public Transform gameOverTestSprite;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     public void PlantWaterd()
     {
