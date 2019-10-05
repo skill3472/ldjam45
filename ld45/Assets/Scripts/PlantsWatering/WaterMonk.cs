@@ -13,8 +13,14 @@ public class WaterMonk : MonoBehaviour
     public Transform maxRightMove;
 
     private int _dir = -1;
+    private SpriteRenderer _spriteRenderer;
 
-    void Update()
+    private void Start()
+    {
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+    }
+
+    private void Update()
     {
         if (transform.position.x > maxLeftMove.position.x && _dir < 0)
         {
@@ -27,6 +33,7 @@ public class WaterMonk : MonoBehaviour
             if (transform.position.x >= maxRightMove.position.x) _dir = -1;
         }
         speed += Time.deltaTime * speedingUp;
+        _spriteRenderer.flipX = (_dir < 0);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
