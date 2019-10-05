@@ -26,10 +26,13 @@ public class NotesControlling : MonoBehaviour
             if (actualNote != null){
                 if (lastDoneNote != null){
                     if (singingTrialGenerator.notes.IndexOf(lastDoneNote)
-                        == singingTrialGenerator.notes.IndexOf(actualNote) - 1) { 
+                        == singingTrialGenerator.notes.IndexOf(actualNote) - 1)
+                    {
                         actualNote.Done();
                         lastDoneNote = actualNote;
                     }
+                    else
+                        MissClick();
                 }else {
                     if (singingTrialGenerator.notes.IndexOf(actualNote) == 0){
                         actualNote.Done();
@@ -38,7 +41,8 @@ public class NotesControlling : MonoBehaviour
                     else
                         MissClick();
                 }
-            }
+            }else
+                MissClick();
         }
             
     }
