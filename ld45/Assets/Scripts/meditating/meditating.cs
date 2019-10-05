@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class meditating : MonoBehaviour
 {
@@ -50,6 +51,10 @@ public class meditating : MonoBehaviour
     public void Loose()
     {
         Debug.Log("u r dead");
-        //Show score, get to next scene, ect.
+        //Show score, splash screen, ect. HERE
+        //
+        //
+        //Show score, splash screen, ect. HERE
+        SceneManager.LoadScene(1);
     }
 }
