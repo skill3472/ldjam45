@@ -7,16 +7,15 @@ using UnityEngine.SceneManagement;
 public class meditating : MonoBehaviour
 {
     public GameController gameManager;
+    public PointsCounter pointsCounter;
 
 	public Transform[] spawnpoints;
 	public float timeBeforeNextSpawn;
 	public GameObject thought;
 	public float LocalDifficulty;
 	public int points;
-	public Text scoreText;
     public int lives;
 
-    // Start is called before the first frame update
     void Start()
     {
         lives = 3;
@@ -25,7 +24,6 @@ public class meditating : MonoBehaviour
         LocalDifficulty = 1f;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timeBeforeNextSpawn -= Time.deltaTime;
@@ -35,13 +33,10 @@ public class meditating : MonoBehaviour
         	timeBeforeNextSpawn = 2 / LocalDifficulty;
         	SpawnThought();
         }
-        scoreText.text = points.ToString();
 
-        //Detecting death
         if(lives <= 0)
-        {
             Loose();
-        }
+       
     }
 
     public void SpawnThought()
@@ -63,4 +58,5 @@ public class meditating : MonoBehaviour
     {
         gameManager.GameEnd();
     }
+
 }

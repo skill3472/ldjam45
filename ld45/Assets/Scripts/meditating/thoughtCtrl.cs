@@ -11,42 +11,26 @@ public class thoughtCtrl : MonoBehaviour
     public Sprite[] thoughtsPossible;
 	//public float movementTick;
 
-    // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[(int) Mathf.Round(Random.Range(0,8))];
+        gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[Random.Range(0,8)];
     	gm = GameObject.Find("_GM");
-        //Checking which way the thought should be heading
-        if(transform.position.x > 0)
-        {
-        	isLeft = false;
-        }
-        else
-        {
-        	isLeft = true;
-        }
+
+        isLeft = transform.position.x <= 0;
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-    	 //Move Right
-    	 if(isLeft)
-    	 {
-    	 	transform.Translate(transform.right * Time.deltaTime * 2);
-    	 }
-    	 //Move Left
-    	 else
-    	 {
-			transform.Translate(-transform.right * Time.deltaTime * 2);	
-    	 }
+
+    	transform.Translate(transform.right * Time.deltaTime * (isLeft ? 2 : -2));
     	 
     }
 
     void OnMouseDown()
     {
-    	gm.GetComponent<meditating>().points++;
-    	GameObject.Destroy(gameObject);
+        FindObjectOfType<PointsCounter>().AddPoints(100);
+    	Destroy(gameObject);
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -54,7 +38,7 @@ public class thoughtCtrl : MonoBehaviour
         if(col.gameObject.tag == "Head")
         {
             gm.GetComponent<meditating>().lives--;
-            GameObject.Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 }
