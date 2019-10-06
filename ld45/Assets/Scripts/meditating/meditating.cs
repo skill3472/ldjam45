@@ -26,6 +26,7 @@ public class meditating : MonoBehaviour
     void Start()
     {
         _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
+        FindObjectOfType<AudioManager>().Play("Start");
         lives = 3;
     	points = 0;
         LocalDifficulty = 1f;
