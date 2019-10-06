@@ -5,12 +5,10 @@ using UnityEngine.UI;
 
 public class thoughtCtrl : MonoBehaviour
 {
-    //Da
 	private GameObject gm,monksHead;
 	[SerializeField]
 	private bool isLeft;
     public Sprite[] thoughtsPossible;
-	//public float movementTick;
     
     void Start()
     {
@@ -23,12 +21,9 @@ public class thoughtCtrl : MonoBehaviour
 
     void Update()
     {
-    	//Nie zmieniać nazwy!!
-        monksHead=GameObject.Find("HeadPosition");
-    	//transform.Translate(transform.right * Time.deltaTime * (isLeft ? 2 : -2));
+        monksHead = GameObject.FindGameObjectWithTag("Head");
         float step = 3 * Time.deltaTime;
 
-        // move sprite towards the target location
         transform.position = Vector2.MoveTowards(transform.position, monksHead.transform.position, step);
     }
 
