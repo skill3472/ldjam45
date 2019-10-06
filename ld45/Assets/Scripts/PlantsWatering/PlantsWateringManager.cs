@@ -18,6 +18,7 @@ public class PlantsWateringManager : MonoBehaviour
     private void Start()
     {
         _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
+        FindObjectOfType<AudioManager>().Play("Presplash");
     }
 
     private void Update()

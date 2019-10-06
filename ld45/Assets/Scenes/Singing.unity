@@ -904,57 +904,62 @@ MonoBehaviour:
   sounds:
   - name: Start
     clip: {fileID: 8300000, guid: fe31ef7a446704e4b9b6ee5fb046b0e1, type: 3}
-    volume: 0.26
+    volume: 0.088
     pitch: 0
     source: {fileID: 0}
   - name: Choir
-    clip: {fileID: 8300000, guid: 6fbf086dea4161747a841d5254d754d3, type: 3}
-    volume: 0.472
+    clip: {fileID: 8300000, guid: 2307e7e3a41364366b160f6deb58bf0f, type: 3}
+    volume: 0.124
     pitch: 0
     source: {fileID: 0}
   - name: Note1
     clip: {fileID: 8300000, guid: f37adb997dc6b4fb786c30e12e051d3c, type: 3}
-    volume: 1
+    volume: 0.844
     pitch: 0
     source: {fileID: 0}
   - name: Note2
     clip: {fileID: 8300000, guid: 76810eeca283a480898db68c1a146dd1, type: 3}
-    volume: 1
+    volume: 0.828
     pitch: 0
     source: {fileID: 0}
   - name: Note3
     clip: {fileID: 8300000, guid: 75028f33d6d3a45b599454312ccf0b97, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: 0
     source: {fileID: 0}
   - name: Note4
     clip: {fileID: 8300000, guid: 0d34c830a593b4115bfedb921ff4b96e, type: 3}
-    volume: 1
+    volume: 0.804
     pitch: 0
     source: {fileID: 0}
   - name: Note5
     clip: {fileID: 8300000, guid: 23856b4030a494f939c07aaf4516d5c5, type: 3}
-    volume: 1
+    volume: 0.836
     pitch: 0
     source: {fileID: 0}
   - name: Note6
     clip: {fileID: 8300000, guid: 3adad27d5aa884624bd1fc270222cb19, type: 3}
-    volume: 1
+    volume: 0.836
     pitch: 0
     source: {fileID: 0}
   - name: Note7
     clip: {fileID: 8300000, guid: 0c90922f895d84ea8bc537cc76afdbb0, type: 3}
-    volume: 1
+    volume: 0.844
     pitch: 0
     source: {fileID: 0}
   - name: Note8
     clip: {fileID: 8300000, guid: ea516857232d9449e8eaf687a4fc3069, type: 3}
-    volume: 1
+    volume: 0.872
     pitch: 0
     source: {fileID: 0}
   - name: Note9
     clip: {fileID: 8300000, guid: 2d8e24cfbb98c4ab6853183dfd2aea1b, type: 3}
-    volume: 1
+    volume: 0.852
+    pitch: 0
+    source: {fileID: 0}
+  - name: Presplash
+    clip: {fileID: 8300000, guid: 80fd025f7e6ab4f1bbafbdb9c6e31af4, type: 3}
+    volume: 0.44
     pitch: 0
     source: {fileID: 0}
 --- !u!4 &1392669111
