@@ -21,11 +21,11 @@ public class PlantRowManager : MonoBehaviour
         {
             if (Random.Range(0, 2) == 1 && maxBadPlants > 0)
             {
-                Instantiate(plantsTypes[0], t);
+                Instantiate((Random.Range(0, 50)>25 ? plantsTypes[0] : plantsTypes[1]), t);
                 maxBadPlants--;
             }
             else
-                Instantiate(plantsTypes[Random.Range(1, plantsTypes.Count)], t);
+                Instantiate(plantsTypes[Random.Range(2, plantsTypes.Count)], t);
         }
     }
 }
