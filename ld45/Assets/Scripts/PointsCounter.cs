@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PointsCounter : MonoBehaviour
 {
-    public int points;
-    public int combo = 1;
-    public int maxCombo = 8;
+    public static int points;
+    public static int combo = 1;
+    public static int maxCombo = 8;
 
     public Text pointsText;
     public string prefixOfText;
