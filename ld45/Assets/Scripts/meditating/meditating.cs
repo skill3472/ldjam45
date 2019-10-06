@@ -11,6 +11,8 @@ public class meditating : MonoBehaviour
     public AudioClip plum;
     public AudioClip whispers;
 
+    public bool isPlaying;
+
     public GameController gameManager;
     public PointsCounter pointsCounter;
 
@@ -34,6 +36,12 @@ public class meditating : MonoBehaviour
 
     void Update()
     {
+        if (!isPlaying)
+        {
+            isPlaying = gameManager.isPlaying;
+            return;
+        }
+
         timeBeforeNextSpawn -= Time.deltaTime;
         if(timeBeforeNextSpawn <= 0)
         {
@@ -66,6 +74,7 @@ public class meditating : MonoBehaviour
 
     public void AddPoints(int amount)
     {
+        if (!isPlaying) return;
         points += amount;
         pointsCounter.AddPoints(amount, Vector3.zero);
     }

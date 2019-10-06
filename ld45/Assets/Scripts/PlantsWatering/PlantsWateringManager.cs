@@ -23,6 +23,11 @@ public class PlantsWateringManager : MonoBehaviour
 
     private void Update()
     {
+        if (!isPlaying)
+        {
+            isPlaying = gameManger.isPlaying;
+            return;
+        }
         if (Input.GetMouseButtonDown(0))
         {
             monk.actualPlant.AddWater();
@@ -49,6 +54,7 @@ public class PlantsWateringManager : MonoBehaviour
 
     public void GameOver()
     {
+        FindObjectOfType<AudioManager>().Play("BadPlant");
         _cam.Shake();
         if (!isPlaying) return;
         Invoke("GameEnd", 0.3f);

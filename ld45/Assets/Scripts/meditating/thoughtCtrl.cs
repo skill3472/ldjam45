@@ -10,6 +10,8 @@ public class thoughtCtrl : MonoBehaviour
 	private bool isLeft;
     public Sprite[] thoughtsPossible;
     public GameObject explosion;
+
+    public bool isPlaying;
     
     void Start()
     {

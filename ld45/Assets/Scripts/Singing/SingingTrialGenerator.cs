@@ -21,9 +21,9 @@ public class SingingTrialGenerator : MonoBehaviour
     void Start()
     {
         FindObjectOfType<AudioManager>().Play("Start");
-        InvokeRepeating("SingBitches", 1, 1);
+        
         SetRandomMargin();
-        SpawnNote();
+        
     }
 
     void Update()
@@ -44,7 +44,7 @@ public class SingingTrialGenerator : MonoBehaviour
             yOfEachLine[Random.Range(0, yOfEachLine.Count-1)]);
     }
 
-    private void SpawnNote()
+    public void SpawnNote()
     {
         if (notesToGenerate <= 0) return;
         Note newNote = Instantiate(note, GetPoint(), Quaternion.identity);
@@ -56,10 +56,5 @@ public class SingingTrialGenerator : MonoBehaviour
     private void SetRandomMargin()
     {
         _margin = Random.Range(randomXMargin.x, randomXMargin.y);
-    }
-
-    private void SingBitches()
-    {
-        FindObjectOfType<AudioManager>().Play("Choir", true);
     }
 }
