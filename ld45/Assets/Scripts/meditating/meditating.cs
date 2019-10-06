@@ -46,6 +46,7 @@ public class meditating : MonoBehaviour
             if (isPlaying)
             {
                 FindObjectOfType<AudioManager>().Play("Start");
+                FindObjectOfType<AudioManager>().Play("Back");
             }
             return;
         }
