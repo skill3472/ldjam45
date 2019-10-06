@@ -15,6 +15,7 @@ public class thoughtCtrl : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[Random.Range(0,8)];
     	gm = GameObject.Find("_GM");
+        FindObjectOfType<AudioManager>().Play("Whispers", true);
 
         isLeft = transform.position.x <= 0;
 
@@ -53,7 +54,7 @@ public class thoughtCtrl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<AudioManager>().Play("Scared");
+        FindObjectOfType<AudioManager>().Play("Scared", true);
     }
 
     private void Breath()

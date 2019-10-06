@@ -20,6 +20,8 @@ public class SingingTrialGenerator : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Start");
+        InvokeRepeating("SingBitches", 1, 1);
         SetRandomMargin();
         SpawnNote();
     }
@@ -54,5 +56,10 @@ public class SingingTrialGenerator : MonoBehaviour
     private void SetRandomMargin()
     {
         _margin = Random.Range(randomXMargin.x, randomXMargin.y);
+    }
+
+    private void SingBitches()
+    {
+        FindObjectOfType<AudioManager>().Play("Choir", true);
     }
 }

@@ -870,6 +870,105 @@ Transform:
   m_Father: {fileID: 1777638614}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1392669109
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1392669111}
+  - component: {fileID: 1392669110}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1392669110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392669109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a3c5610ba2f4b0bbfdb5bafc153309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Start
+    clip: {fileID: 8300000, guid: fe31ef7a446704e4b9b6ee5fb046b0e1, type: 3}
+    volume: 0.26
+    pitch: 0
+    source: {fileID: 0}
+  - name: Choir
+    clip: {fileID: 8300000, guid: 6fbf086dea4161747a841d5254d754d3, type: 3}
+    volume: 0.472
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note1
+    clip: {fileID: 8300000, guid: f37adb997dc6b4fb786c30e12e051d3c, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note2
+    clip: {fileID: 8300000, guid: 76810eeca283a480898db68c1a146dd1, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note3
+    clip: {fileID: 8300000, guid: 75028f33d6d3a45b599454312ccf0b97, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note4
+    clip: {fileID: 8300000, guid: 0d34c830a593b4115bfedb921ff4b96e, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note5
+    clip: {fileID: 8300000, guid: 23856b4030a494f939c07aaf4516d5c5, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note6
+    clip: {fileID: 8300000, guid: 3adad27d5aa884624bd1fc270222cb19, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note7
+    clip: {fileID: 8300000, guid: 0c90922f895d84ea8bc537cc76afdbb0, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note8
+    clip: {fileID: 8300000, guid: ea516857232d9449e8eaf687a4fc3069, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+  - name: Note9
+    clip: {fileID: 8300000, guid: 2d8e24cfbb98c4ab6853183dfd2aea1b, type: 3}
+    volume: 1
+    pitch: 0
+    source: {fileID: 0}
+--- !u!4 &1392669111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392669109}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1588118816
 GameObject:
   m_ObjectHideFlags: 0
