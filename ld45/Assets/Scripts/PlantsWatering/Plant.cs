@@ -49,7 +49,7 @@ public class Plant : MonoBehaviour
             isTooMuch = true;
             _spiteRenderer.sprite = growStates[growStates.Count-1];
             _plantsWateringManager._cam.Shake();
-            _plantsWateringManager.pointsCounter.AddPoints(-80);
+            _plantsWateringManager.pointsCounter.AddPoints(-80, transform.position);
         }
         if (isDone) return;
 
@@ -57,7 +57,7 @@ public class Plant : MonoBehaviour
             return;
        
         SetWaterLevel(waterLevel+1);
-        _plantsWateringManager.pointsCounter.AddPoints(20);
+        _plantsWateringManager.pointsCounter.AddPoints(20, transform.position);
         if (waterLevel >= maxWaterLevel) Done();
 
         //UpdateSprite
@@ -79,7 +79,7 @@ public class Plant : MonoBehaviour
     private void Done()
     {
         isDone = true;
-        _plantsWateringManager.PlantWaterd();
+        _plantsWateringManager.PlantWaterd(transform);
     }
 
     private void Dead()
