@@ -250,7 +250,7 @@ MonoBehaviour:
   maxWaterLevel: 5
   growStates:
   - {fileID: 21300000, guid: 11d3995ee009641c7aa3174dbe9b2988, type: 3}
-  - {fileID: 21300000, guid: 95f2c0a85a8424392ab77543cfdcd986, type: 3}
+  - {fileID: 21300000, guid: 11d3995ee009641c7aa3174dbe9b2988, type: 3}
   - {fileID: 21300000, guid: 11d3995ee009641c7aa3174dbe9b2988, type: 3}
   - {fileID: 21300000, guid: 11d3995ee009641c7aa3174dbe9b2988, type: 3}
   - {fileID: 21300000, guid: 11d3995ee009641c7aa3174dbe9b2988, type: 3}

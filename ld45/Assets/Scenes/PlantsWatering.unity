@@ -311,7 +311,7 @@ MonoBehaviour:
     pitch: 0.1919
     source: {fileID: 0}
   - name: BadPlant
-    clip: {fileID: 8300000, guid: db1c0a3a47aca4ba2ae1e1f2f752f19d, type: 3}
+    clip: {fileID: 8300000, guid: 07dd53408b21f4a49a5acc0eb824314a, type: 3}
     volume: 1
     pitch: 0.1919
     source: {fileID: 0}

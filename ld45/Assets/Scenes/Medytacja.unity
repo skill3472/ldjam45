@@ -428,7 +428,7 @@ MonoBehaviour:
     pitch: 0
     source: {fileID: 0}
   - name: Plop
-    clip: {fileID: 8300000, guid: b243bbf1cf3a9ce479d5a4a37fb9a978, type: 3}
+    clip: {fileID: 8300000, guid: a47900c1f772dc0428dc3fbf3cd1ec2c, type: 3}
     volume: 1
     pitch: 0
     source: {fileID: 0}
@@ -1335,6 +1335,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1470747932231940159, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: pointsEffect
+      value: 
+      objectReference: {fileID: 8497562905584324467, guid: ccd4cebd2b77548d9a2de9e50a028925,
+        type: 3}
     - target: {fileID: 1470747931540706723, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
       propertyPath: m_IsActive
@@ -1345,11 +1351,5 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1470747932231940159, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
-        type: 3}
-      propertyPath: pointsEffect
-      value: 
-      objectReference: {fileID: 8497562905584324467, guid: ccd4cebd2b77548d9a2de9e50a028925,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ea44979e61fc435d8fc6d38aef0cbbc, type: 3}
