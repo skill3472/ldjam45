@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaterMonk : MonoBehaviour
 {
     public Plant actualPlant;
+    public PlantsWateringManager plantsWateringManager;
     public Sprite standardSprite;
     public Sprite wateringSprite;
 
@@ -27,6 +28,8 @@ public class WaterMonk : MonoBehaviour
 
     private void Update()
     {
+        if (!plantsWateringManager.isPlaying) return;
+
         if (transform.position.x > maxLeftMove.position.x && _dir < 0)
         {
             transform.position -= new Vector3(Time.deltaTime * speed, 0);
@@ -62,7 +65,6 @@ public class WaterMonk : MonoBehaviour
     private void PlayRandomFootstep()
     {
         string n = "footestep" + Random.Range(1, 11);
-            Debug.Log(n);
         FindObjectOfType<AudioManager>().Play(n);
         timeToNextSound = 1/speed*2;
     }

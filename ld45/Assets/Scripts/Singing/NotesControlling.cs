@@ -19,14 +19,19 @@ public class NotesControlling : MonoBehaviour
 
     private float timeFromLastNote;
     
-    private void Start()
-    {
-        isPlaying = true;
-    }
 
     private void Update()
     {
-        if (!isPlaying) return;
+        if (!isPlaying) {
+            isPlaying = gameManager.isPlaying;
+            if (isPlaying)
+            {
+                InvokeRepeating("SingBitches", 1, 1);
+                singingTrialGenerator.SpawnNote();
+            }
+            return;
+        }
+
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = 10;
         transform.position = Camera.main.ScreenToWorldPoint(mousePos);
@@ -114,5 +119,10 @@ public class NotesControlling : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (!isPlaying) return;
+    }
+
+    private void SingBitches()
+    {
+        FindObjectOfType<AudioManager>().Play("Choir", true);
     }
 }

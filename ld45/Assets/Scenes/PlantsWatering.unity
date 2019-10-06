@@ -310,6 +310,11 @@ MonoBehaviour:
     volume: 0.154
     pitch: 0.1919
     source: {fileID: 0}
+  - name: BadPlant
+    clip: {fileID: 8300000, guid: 07dd53408b21f4a49a5acc0eb824314a, type: 3}
+    volume: 1
+    pitch: 0.1919
+    source: {fileID: 0}
 --- !u!4 &96853915
 Transform:
   m_ObjectHideFlags: 0
@@ -545,7 +550,7 @@ MonoBehaviour:
   gameManger: {fileID: 296347281}
   pointsCounter: {fileID: 296347282}
   pointsPerWaterdPlant: 100
-  isPlaying: 1
+  isPlaying: 0
   plantsToWater: 0
   monk: {fileID: 2075352669}
   _cam: {fileID: 0}
@@ -562,6 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 2008171969}
+  isPlaying: 0
 --- !u!114 &296347282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -741,6 +747,97 @@ Transform:
   m_Father: {fileID: 1110176423}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &772880069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 772880070}
+  - component: {fileID: 772880073}
+  - component: {fileID: 772880072}
+  - component: {fileID: 772880071}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &772880070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772880069}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1235941589}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &772880071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772880069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46fa85c27a32c4268b7dfd9af20b3ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presplashes:
+  - {fileID: 21300000, guid: 03fdc38cceb18ed46a7ab1cb4d443863, type: 3}
+  - {fileID: 21300000, guid: 42a2a1437207db049be82bd8092b963e, type: 3}
+  timeToNextSlide: 1.5
+  gameManager: {fileID: 296347281}
+--- !u!114 &772880072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772880069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 03fdc38cceb18ed46a7ab1cb4d443863, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &772880073
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772880069}
+  m_CullTransparentMesh: 0
 --- !u!1 &808182091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,6 +1230,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1601774135}
+  - {fileID: 772880070}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2157,6 +2255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualPlant: {fileID: 1701620545}
+  plantsWateringManager: {fileID: 296347280}
   standardSprite: {fileID: 21300000, guid: 9e20006ddf665405d9ee9f94719ba6f4, type: 3}
   wateringSprite: {fileID: 21300000, guid: 3eb073c2fd7a94c9997ff6fa8923ac7a, type: 3}
   speed: 3
