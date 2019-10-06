@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1594190033}
   m_Layer: 5
   m_Name: PointsText
-  m_TagString: Untagged
+  m_TagString: PointsText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

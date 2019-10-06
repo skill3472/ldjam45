@@ -14,7 +14,9 @@ public class PointsCounter : MonoBehaviour
 
     void Start()
     {
-        SetText();   
+        pointsText = GameObject.FindGameObjectWithTag("PointsText").GetComponent<Text>();
+        SetText();
+        
     }
 
     void Update()

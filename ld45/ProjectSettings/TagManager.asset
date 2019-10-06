@@ -8,6 +8,7 @@ TagManager:
   - Plant
   - SingingTrial
   - SingingNote
+  - PointsText
   layers:
   - Default
   - TransparentFX
