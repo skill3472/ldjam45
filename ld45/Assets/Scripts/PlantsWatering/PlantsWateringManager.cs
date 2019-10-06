@@ -21,7 +21,10 @@ public class PlantsWateringManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             monk.actualPlant.AddWater();
+            monk.ChangeSprite(true);
         }
+        else if(Input.GetMouseButtonUp(0))
+            monk.ChangeSprite(false);
     }
 
     public void PlantWaterd()
