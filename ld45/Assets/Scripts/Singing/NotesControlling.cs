@@ -26,6 +26,7 @@ public class NotesControlling : MonoBehaviour
             isPlaying = gameManager.isPlaying;
             if (isPlaying)
             {
+                FindObjectOfType<AudioManager>().Play("Start");
                 InvokeRepeating("SingBitches", 1, 1);
                 singingTrialGenerator.SpawnNote();
             }
