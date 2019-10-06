@@ -38,7 +38,7 @@ public class Note : MonoBehaviour
         if (time <= .5f) _pointsCounter.AddCombo();
         else _pointsCounter.DecreaseCombo();
 
-        _pointsCounter.AddPoints(points);
+        _pointsCounter.AddPoints(points, Vector3.zero);
 
     }
 

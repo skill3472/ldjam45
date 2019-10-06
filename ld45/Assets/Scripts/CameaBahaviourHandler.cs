@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CameaBahaviourHandler : MonoBehaviour
 {
+    public TextMesh pointsEffect;
+
     private Animator _animator;
 
     void Start()
@@ -35,5 +37,15 @@ public class CameaBahaviourHandler : MonoBehaviour
     public void Shake()
     {
         _animator.SetTrigger("CameraShake");
+    }
+
+    public void MakePointsEffect(string points, Vector3 pos)
+    {
+        if (pos == Vector3.zero)
+        {
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = -5;
+        }
+        TextMesh t = Instantiate(pointsEffect, pos, transform.rotation);
     }
 }

@@ -66,7 +66,7 @@ public class meditating : MonoBehaviour
     public void AddPoints(int amount)
     {
         points += amount;
-        pointsCounter.AddPoints(amount);
+        pointsCounter.AddPoints(amount, Vector3.zero);
     }
 
     public void DecreaseLives()

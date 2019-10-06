@@ -31,10 +31,10 @@ public class PlantsWateringManager : MonoBehaviour
             monk.ChangeSprite(false);
     }
 
-    public void PlantWaterd()
+    public void PlantWaterd(Transform plant)
     {
         plantsToWater--;
-        pointsCounter.AddPoints(pointsPerWaterdPlant);
+        pointsCounter.AddPoints(pointsPerWaterdPlant, plant.position);
         if (plantsToWater <= 0)
             Invoke("Win", 0.3f);
     }

@@ -882,6 +882,7 @@ GameObject:
   - component: {fileID: 1588118818}
   - component: {fileID: 1588118819}
   - component: {fileID: 1588118820}
+  - component: {fileID: 1588118821}
   m_Layer: 0
   m_Name: Notes deleter
   m_TagString: Untagged
@@ -963,6 +964,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   singingTrialGenerator: {fileID: 464579511}
+--- !u!61 &1588118821
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588118816}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 3.51, y: -1.92}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 19.72, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1594190031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,7 +1046,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6caf6f35bbf7e4b76981f8ecd5817c8d, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1112,6 +1139,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1470747932231940159, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: pointsEffect
+      value: 
+      objectReference: {fileID: 8497562905584324467, guid: ccd4cebd2b77548d9a2de9e50a028925,
+        type: 3}
     - target: {fileID: 1470747931540706723, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
       propertyPath: m_IsActive
