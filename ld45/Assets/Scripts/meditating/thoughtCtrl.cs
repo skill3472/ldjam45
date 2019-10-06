@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class thoughtCtrl : MonoBehaviour
 {
+    //Da
 	private GameObject gm,monksHead;
 	[SerializeField]
 	private bool isLeft;
