@@ -19,11 +19,8 @@ public class SingingTrialGenerator : MonoBehaviour
     private float _margin;
 
     void Start()
-    {
-        FindObjectOfType<AudioManager>().Play("Start");
-        
-        SetRandomMargin();
-        
+    {   
+        SetRandomMargin();   
     }
 
     void Update()

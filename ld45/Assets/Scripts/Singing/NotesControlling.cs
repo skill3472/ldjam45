@@ -18,7 +18,11 @@ public class NotesControlling : MonoBehaviour
     public Note lastDoneNote;
 
     private float timeFromLastNote;
-    
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Presplash");
+    }
 
     private void Update()
     {
@@ -26,6 +30,7 @@ public class NotesControlling : MonoBehaviour
             isPlaying = gameManager.isPlaying;
             if (isPlaying)
             {
+                FindObjectOfType<AudioManager>().Play("Start");
                 InvokeRepeating("SingBitches", 1, 1);
                 singingTrialGenerator.SpawnNote();
             }
@@ -106,8 +111,6 @@ public class NotesControlling : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (!isPlaying) return;
-        if (collision.gameObject.CompareTag("SingingTrial"))
-            Debug.Log("LEFT THE TRIAL");
         else if (collision.gameObject.CompareTag("SingingNote"))
         {
             if(actualNote != null)

@@ -419,12 +419,12 @@ MonoBehaviour:
   sounds:
   - name: Start
     clip: {fileID: 8300000, guid: 39a28ce2b0c001b4eb4aed38171476b6, type: 3}
-    volume: 0.385
+    volume: 0.136
     pitch: 0
     source: {fileID: 0}
   - name: Breath
     clip: {fileID: 8300000, guid: ba303168ddeb8e04cb847f7b705d3052, type: 3}
-    volume: 0.051
+    volume: 0.223
     pitch: 0
     source: {fileID: 0}
   - name: Plop
@@ -434,12 +434,22 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Scared
     clip: {fileID: 8300000, guid: cb7c55201d5800748bd70b4fec3909ca, type: 3}
-    volume: 0.383
+    volume: 0.166
     pitch: 0
     source: {fileID: 0}
   - name: Whispers
     clip: {fileID: 8300000, guid: 9fa334e8a3ebd2c429e40908bebe2220, type: 3}
-    volume: 0.386
+    volume: 0.083
+    pitch: 0
+    source: {fileID: 0}
+  - name: Back
+    clip: {fileID: 8300000, guid: 1c43e42958641461f8d3bbf2dce08555, type: 3}
+    volume: 0.117
+    pitch: 0
+    source: {fileID: 0}
+  - name: Presplash
+    clip: {fileID: 8300000, guid: 80fd025f7e6ab4f1bbafbdb9c6e31af4, type: 3}
+    volume: 0.389
     pitch: 0
     source: {fileID: 0}
 --- !u!4 &554029511
@@ -536,7 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
