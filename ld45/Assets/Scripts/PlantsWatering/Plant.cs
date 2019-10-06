@@ -28,8 +28,7 @@ public class Plant : MonoBehaviour
 
         maxWaterLevel = growStates.Count-2;
 
-        waterLevel = Random.Range(1, maxWaterLevel-2);
-        SetWaterLevel(waterLevel);
+        waterLevel = Random.Range(0, maxWaterLevel-2);
         _spiteRenderer.sprite = growStates[waterLevel];
 
         if (state)
@@ -50,6 +49,7 @@ public class Plant : MonoBehaviour
             _spiteRenderer.sprite = growStates[growStates.Count-1];
             _plantsWateringManager._cam.Shake();
             _plantsWateringManager.pointsCounter.AddPoints(-80, transform.position);
+            FindObjectOfType<AudioManager>().Play("TooMuchWater" + Random.Range(1,3));
         }
         if (isDone) return;
 
@@ -59,9 +59,6 @@ public class Plant : MonoBehaviour
         SetWaterLevel(waterLevel+1);
         _plantsWateringManager.pointsCounter.AddPoints(20, transform.position);
         if (waterLevel >= maxWaterLevel) Done();
-
-        //UpdateSprite
-        _spiteRenderer.color = new Color(_spiteRenderer.color.r + .1f, _spiteRenderer.color.g + .1f, _spiteRenderer.color.b + .1f);
     }
 
     public void Focus()
@@ -101,5 +98,7 @@ public class Plant : MonoBehaviour
     {
         waterLevel = level;
         _spiteRenderer.sprite = growStates[waterLevel];
+        if(waterLevel<maxWaterLevel)
+            FindObjectOfType<AudioManager>().Play("Watering");
     }
 }

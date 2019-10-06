@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Sound.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlantsWatering/Plant.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="65" Column="37" />
-      <File FileName="Assets/Scripts/AudioManager.cs" Line="24" Column="1" />
-      <File FileName="Assets/Scripts/Sound.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="66" Column="9" />
+      <File FileName="Assets/Scripts/AudioManager.cs" Line="16" Column="15" />
+      <File FileName="Assets/Scripts/Sound.cs" Line="13" Column="23" />
+      <File FileName="Assets/Scripts/PlantsWatering/PlantsWateringManager.cs" Line="36" Column="58" />
+      <File FileName="Assets/Scripts/PlantsWatering/Plant.cs" Line="58" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,9 +14,10 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="meditating" expanded="True" />
-                <Node name="PlantsWatering" expanded="True" />
+                <Node name="PlantsWatering" expanded="True">
+                  <Node name="Plant.cs" selected="True" />
+                </Node>
                 <Node name="Singing" expanded="True" />
-                <Node name="Sound.cs" selected="True" />
               </Node>
             </Node>
           </Node>

@@ -231,24 +231,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: TooMuchWater1
-    clip: {fileID: 8300000, guid: 9d904dcaa943e4f7996b9c01d052b58d, type: 3}
+    clip: {fileID: 8300000, guid: 90dc914d7024a92418ceb5e6cc84c34d, type: 3}
     volume: 1
-    pitch: 0.3
+    pitch: 0.1648
     source: {fileID: 0}
   - name: TooMuchWater2
     clip: {fileID: 8300000, guid: d9c801d46de584b59931f9caa45dcc91, type: 3}
     volume: 1
-    pitch: 0.3
+    pitch: 0.1765
     source: {fileID: 0}
   - name: PlantReady
-    clip: {fileID: 8300000, guid: df5cc76a03ed241e69c600b1d5e97429, type: 3}
+    clip: {fileID: 8300000, guid: 94b52865197780c41ac0019346998034, type: 3}
     volume: 1
-    pitch: 0.3
+    pitch: 0.1667
     source: {fileID: 0}
   - name: Watering
-    clip: {fileID: 8300000, guid: 2a9cf64ccc535480b857ab273b5d35db, type: 3}
+    clip: {fileID: 8300000, guid: c9ed1ff572738d64694ea800210d2f42, type: 3}
     volume: 1
-    pitch: 0.3
+    pitch: 0.187
     source: {fileID: 0}
   - name: footestep1
     clip: {fileID: 8300000, guid: c9133a0797eaf4974bf1fc35829e3144, type: 3}
@@ -304,6 +304,11 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 014e91b3afe3344efa58108b6f0f6e5e, type: 3}
     volume: 1
     pitch: 0.1
+    source: {fileID: 0}
+  - name: Start
+    clip: {fileID: 8300000, guid: 7e98d92e2dd34d64296235721a0c40e3, type: 3}
+    volume: 1
+    pitch: 0.1919
     source: {fileID: 0}
 --- !u!4 &96853915
 Transform:
