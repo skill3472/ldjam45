@@ -190,7 +190,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a71d171d0522edd4f976a4bbd9eb9226, type: 2}
+  - {fileID: 2100000, guid: 9ecb972d2469a7447825a7273d86faf5, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -15802,11 +15802,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1758964281854097598, guid: aee3b08622bf87f4ab4b0166f6299a4e,
-        type: 3}
-      propertyPath: m_Name
-      value: tlorakieta
-      objectReference: {fileID: 0}
     - target: {fileID: 1758964281854097596, guid: aee3b08622bf87f4ab4b0166f6299a4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15861,6 +15856,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758964281854097598, guid: aee3b08622bf87f4ab4b0166f6299a4e,
+        type: 3}
+      propertyPath: m_Name
+      value: tlorakieta
       objectReference: {fileID: 0}
     - target: {fileID: 1758964281854097597, guid: aee3b08622bf87f4ab4b0166f6299a4e,
         type: 3}
