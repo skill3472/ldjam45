@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class SpaceLayers : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public float changeSpeed=0;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag=="MainCamera")
+        {
+            Debug.Log("daaa");
+            GmRocket.instance.speed=-changeSpeed;
+        }    
     }
 }

@@ -8,9 +8,9 @@ public class GmRocket : MonoBehaviour
     public float speed;
     private GameObject background;
     private Rigidbody2D rb2dOfBack;
-    private void Awake() {
-        if(instance!=null)
-            instance=this;    
+    void Awake() {
+        if(instance == null)
+            instance=this;
     }
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,13 @@ public class GmRocket : MonoBehaviour
     void Update()
     {
         if(rb2dOfBack.velocity.magnitude<-speed)
+        {
+            rb2dOfBack.drag=1;
             rb2dOfBack.AddForce(new Vector2(0,speed));
+        }
+        else
+        {
+            rb2dOfBack.drag+=0.1f;
+        }
     }
 }

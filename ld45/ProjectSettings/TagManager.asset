@@ -9,6 +9,7 @@ TagManager:
   - SingingTrial
   - SingingNote
   - PointsText
+  - layers
   layers:
   - Default
   - TransparentFX
