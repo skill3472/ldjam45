@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class RocketController : MonoBehaviour
 {
     Animator animator;
     [SerializeField]
-    private GameObject laser;
+    private GameObject laser,exp;
     private Rigidbody2D rb2d;
     [SerializeField]
     private float speed,hp;
     public float ammo=0;
+    public bool end=false;
     [SerializeField]
-    bool canShoot=true,isShooting=false;
+    bool canShoot=true,isShooting=false,canMove=true;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,26 @@ public class RocketController : MonoBehaviour
             StartCoroutine(Shoot());
             canShoot=false;
         }
+        if(end)
+        {
+            StartCoroutine(landing());
+        }
+    }
+    IEnumerator landing()
+    {
+        rb2d.AddForce(new Vector2(0,99));
+        yield return new WaitForSeconds(0.5f);
+    }
+    IEnumerator ded()
+    {
+        canMove=false;
+        GameObject e=Instantiate(exp);
+        e.transform.position=transform.position;
+        Destroy(e,2);
+        //Wypierdziela rakiete w cholere
+        transform.position=new Vector2(999999,0);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("Rakieta2");
     }
     IEnumerator Shoot()
     {
@@ -51,6 +72,14 @@ public class RocketController : MonoBehaviour
         {
             animator.SetBool("isOpened",false);
             canShoot=true;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.transform.tag=="asteroid")
+        {
+            hp--;
+            if(hp<=0)
+                StartCoroutine(ded());
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - layers
   - bullet
   - player
+  - asteroid
   layers:
   - Default
   - TransparentFX
