@@ -261,9 +261,9 @@ GameObject:
   - component: {fileID: 458759457}
   - component: {fileID: 458759458}
   - component: {fileID: 458759459}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rakieta
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -671,7 +671,7 @@ GameObject:
   m_Component:
   - component: {fileID: 900665965}
   - component: {fileID: 900665966}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,7 +1013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1310453750}
   - component: {fileID: 1310453751}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rakietaGora
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 1532221213}
   - component: {fileID: 1532221212}
   - component: {fileID: 1532221211}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fireAnim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 1648434490}
   - component: {fileID: 1648434492}
   - component: {fileID: 1648434491}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
