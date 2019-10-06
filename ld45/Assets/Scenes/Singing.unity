@@ -425,7 +425,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.32609558
+        value: 0.8840637
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -525,7 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4a228705c854d85b71048417094fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsText: {fileID: 1594190033}
   prefixOfText: 'Points: '
 --- !u!1 &168761926
 GameObject:
@@ -977,7 +976,7 @@ GameObject:
   - component: {fileID: 1594190033}
   m_Layer: 5
   m_Name: PointsText
-  m_TagString: Untagged
+  m_TagString: PointsText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,6 +1051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470747932231940154, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1470747932231940157, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
