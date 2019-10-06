@@ -5,6 +5,12 @@ using UnityEngine;
 public class NotesEndOfLine : MonoBehaviour
 {
     public SingingTrialGenerator singingTrialGenerator;
+    private CameaBahaviourHandler _cam;
+
+    private void Start()
+    {
+       _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,8 +27,11 @@ public class NotesEndOfLine : MonoBehaviour
                 return;
             }
             singingTrialGenerator.notes.Remove(thisNote);
-            if(!thisNote.isDone)
-                thisNote.GetComponent<SpriteRenderer>().color = new Color(1, 0,0);
+            if (!thisNote.isDone)
+            {
+                thisNote.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+                _cam.Shake();
+            }
             Destroy(collision.gameObject, 0.1f);
         }
     }
