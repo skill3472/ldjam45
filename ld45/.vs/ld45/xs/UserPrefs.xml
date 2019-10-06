@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlantsWatering/PlantRowManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyAfterTime.cs">
     <Files>
       <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="34" Column="13" />
       <File FileName="Assets/Scripts/PlantsWatering/PlantsWateringManager.cs" Line="39" Column="33" />
       <File FileName="Assets/Scripts/PlantsWatering/Plant.cs" Line="50" Column="66" />
       <File FileName="Assets/Scripts/PlantsWatering/PlantWaterLevelLine.cs" Line="35" Column="64" />
-      <File FileName="Assets/Scripts/PlantsWatering/PlantRowManager.cs" Line="24" Column="48" />
+      <File FileName="Assets/Scripts/PlantsWatering/PlantRowManager.cs" Line="28" Column="55" />
+      <File FileName="Assets/Scripts/TextMeshFixer.cs" Line="11" Column="50" />
+      <File FileName="Assets/Scripts/CameaBahaviourHandler.cs" Line="8" Column="12" />
+      <File FileName="Assets/Scripts/DestroyAfterTime.cs" Line="7" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,10 +17,9 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="meditating" expanded="True" />
-                <Node name="PlantsWatering" expanded="True">
-                  <Node name="PlantRowManager.cs" selected="True" />
-                </Node>
+                <Node name="PlantsWatering" expanded="True" />
                 <Node name="Singing" expanded="True" />
+                <Node name="DestroyAfterTime.cs" selected="True" />
               </Node>
             </Node>
           </Node>
