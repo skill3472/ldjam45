@@ -525,9 +525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4a228705c854d85b71048417094fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
-  combo: 1
-  maxCombo: 8
   pointsText: {fileID: 1594190033}
   prefixOfText: 'Points: '
 --- !u!1 &168761926
@@ -738,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4341cfe86162d4afba92cd4c6acc57fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notesToGenerate: 25
+  notesToGenerate: 17
   notesSpeed: 1
   notesSpeedingUp: 0.06
   xMax: {x: -3.96, y: 8.38}
