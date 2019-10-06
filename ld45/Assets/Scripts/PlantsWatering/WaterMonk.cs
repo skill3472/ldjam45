@@ -9,6 +9,7 @@ public class WaterMonk : MonoBehaviour
     public Sprite wateringSprite;
 
     public float speed;
+    public float maxSpeed = 6;
     public float speedingUp;
 
     public Transform maxLeftMove;
@@ -16,10 +17,6 @@ public class WaterMonk : MonoBehaviour
 
     private int _dir = -1;
     public SpriteRenderer spriteRenderer;
-
-    private void Start()
-    {
-    }
 
     private void Update()
     {
@@ -33,7 +30,8 @@ public class WaterMonk : MonoBehaviour
             transform.position += new Vector3(Time.deltaTime * speed, 0);
             if (transform.position.x >= maxRightMove.position.x) _dir = -1;
         }
-        speed += Time.deltaTime * speedingUp;
+        if(speed < maxSpeed)
+            speed += Time.deltaTime * speedingUp;
         spriteRenderer.flipX = _dir < 0;
     }
 
