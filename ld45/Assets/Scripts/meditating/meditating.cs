@@ -16,8 +16,11 @@ public class meditating : MonoBehaviour
 	public int points;
     public int lives;
 
+    private CameaBahaviourHandler _cam;
+
     void Start()
     {
+        _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
         lives = 3;
     	points = 0;
         LocalDifficulty = 1f;
@@ -59,6 +62,12 @@ public class meditating : MonoBehaviour
     {
         points += amount;
         pointsCounter.AddPoints(amount);
+    }
+
+    public void DecreaseLives()
+    {
+        lives--;
+        _cam.Shake();
     }
 
 }

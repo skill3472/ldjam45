@@ -44,7 +44,7 @@ public class thoughtCtrl : MonoBehaviour
     {
         if(col.gameObject.tag == "Head")
         {
-            gm.GetComponent<meditating>().lives--;
+            gm.GetComponent<meditating>().DecreaseLives();
             Explode();
         }
     }
