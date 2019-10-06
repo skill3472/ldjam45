@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class meditating : MonoBehaviour
 {
+    public AudioSource audioSrc;
+    public AudioClip plum;
+    public AudioClip whispers;
+
     public GameController gameManager;
     public PointsCounter pointsCounter;
 
@@ -66,6 +71,7 @@ public class meditating : MonoBehaviour
 
     public void DecreaseLives()
     {
+        //whispers.Play(); NIE DZIAŁA
         lives--;
         _cam.Shake();
     }
