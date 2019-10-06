@@ -7,9 +7,15 @@ using UnityEngine.Audio;
 
 public class meditating : MonoBehaviour
 {
+    public GameObject dymek;
+
     public AudioSource audioSrc;
     public AudioClip plum;
     public AudioClip whispers;
+
+    public Color twoLife;
+    public Color oneLife;
+    public Color noLife;
 
     public GameController gameManager;
     public PointsCounter pointsCounter;
@@ -26,7 +32,6 @@ public class meditating : MonoBehaviour
     void Start()
     {
         _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
-        FindObjectOfType<AudioManager>().Play("Start");
         lives = 3;
     	points = 0;
         LocalDifficulty = 1f;
@@ -73,6 +78,14 @@ public class meditating : MonoBehaviour
     public void DecreaseLives()
     {
         //whispers.Play(); NIE DZIAŁA
+        if(lives == 2) dymek.GetComponent<SpriteRenderer>().color = twoLife;
+        else if(lives == 1) dymek.GetComponent<SpriteRenderer>().color = oneLife;
+        if(lives <= 0)
+        {
+            dymek.GetComponent<SpriteRenderer>().color = noLife;
+            Loose();
+        }
+
         lives--;
         _cam.Shake();
     }
