@@ -34,6 +34,7 @@ public class Note : MonoBehaviour
         isDone = true;
         Instantiate(doneEffect, transform);
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        FindObjectOfType<AudioManager>().Play("Note" + Random.Range(1,10));
 
         if (time <= .5f) _pointsCounter.AddCombo();
         else _pointsCounter.DecreaseCombo();
