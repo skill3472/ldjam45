@@ -7,6 +7,11 @@ using UnityEngine.Audio;
 
 public class meditating : MonoBehaviour
 {
+    public GameObject dymek;
+    public Color noLife;
+    public Color oneLife;
+    public Color twoLife;
+
     public AudioSource audioSrc;
     public AudioClip plum;
     public AudioClip whispers;
@@ -43,8 +48,18 @@ public class meditating : MonoBehaviour
         }
 
         if(lives <= 0)
+        {
+            dymek.GetComponent<SpriteRenderer>().color = noLife;
             Loose();
-       
+        }
+        else if(lives == 1)
+        {
+            dymek.GetComponent<SpriteRenderer>().color = oneLife;
+        }
+        else if(lives == 2)
+        {
+            dymek.GetComponent<SpriteRenderer>().color = twoLife;
+        }
     }
 
     public void SpawnThought()
