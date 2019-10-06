@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1357415768}
   - component: {fileID: 1357415767}
   m_Layer: 0
-  m_Name: "t\u0142o medytacja"
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
