@@ -6,7 +6,7 @@ public class RocketController : MonoBehaviour
 {
     Animator animator;
     [SerializeField]
-    private GameObject laser;
+    private GameObject laser,bum;
     private Rigidbody2D rb2d;
     [SerializeField]
     private float speed,hp;
@@ -51,6 +51,20 @@ public class RocketController : MonoBehaviour
         {
             animator.SetBool("isOpened",false);
             canShoot=true;
+        }
+    }
+    IEnumerator ded()
+    {
+        GameObject newBum=Instantiate(bum);
+        newBum.transform.position=transform.position;
+        yield return new WaitForSeconds(2);
+    }
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.transform.tag=="asteroid")
+        {
+            hp--;
+            if(hp<=0)
+                StartCoroutine(ded());
         }
     }
 }
