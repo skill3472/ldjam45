@@ -317,7 +317,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Back
     clip: {fileID: 8300000, guid: f6ac3983c0adc46efa73b768067ea2bf, type: 3}
-    volume: 0.288
+    volume: 0.444
     pitch: 0.2047
     source: {fileID: 0}
   - name: Presplash

@@ -31,7 +31,7 @@ public class CameaBahaviourHandler : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(Random.Range(2, 4));
+        SceneManager.LoadScene(Random.Range(2, 5));
     }
 
     public void Shake()

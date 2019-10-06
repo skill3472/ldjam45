@@ -30,6 +30,7 @@ public class NotesEndOfLine : MonoBehaviour
             if (!thisNote.isDone)
             {
                 thisNote.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
+                FindObjectOfType<AudioManager>().Play("WrongNote");
                 _cam.Shake();
             }
             Destroy(collision.gameObject, 0.1f);

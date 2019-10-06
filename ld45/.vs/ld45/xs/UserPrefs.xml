@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Singing/NotesControlling.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Singing/NotesEndOfLine.cs">
     <Files>
-      <File FileName="Assets/Scripts/meditating/meditating.cs" Line="42" Column="20" />
+      <File FileName="Assets/Scripts/meditating/meditating.cs" Line="39" Column="57" />
       <File FileName="Assets/Scripts/meditating/thoughtCtrl.cs" Line="36" Column="6" />
       <File FileName="Assets/Scripts/Presplash.cs" Line="29" Column="47" />
-      <File FileName="Assets/Scripts/GameController.cs" Line="9" Column="27" />
-      <File FileName="Assets/Scripts/PlantsWatering/Plant.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlantsWatering/PlantsWateringManager.cs" Line="29" Column="20" />
+      <File FileName="Assets/Scripts/GameController.cs" Line="13" Column="20" />
+      <File FileName="Assets/Scripts/PlantsWatering/Plant.cs" Line="84" Column="35" />
+      <File FileName="Assets/Scripts/PlantsWatering/PlantsWateringManager.cs" Line="21" Column="57" />
       <File FileName="Assets/Scripts/PlantsWatering/WaterMonk.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/Singing/SingingTrialGenerator.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Singing/NotesControlling.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Singing/SingingTrialGenerator.cs" Line="23" Column="27" />
+      <File FileName="Assets/Scripts/Singing/NotesControlling.cs" Line="24" Column="57" />
+      <File FileName="Assets/Scripts/Rocket/SpaceLayers.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/CameaBahaviourHandler.cs" Line="34" Column="49" />
+      <File FileName="Assets/Scripts/Singing/Note.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Singing/NotesEndOfLine.cs" Line="33" Column="65" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,8 +23,9 @@
               <Node name="Scripts" expanded="True">
                 <Node name="meditating" expanded="True" />
                 <Node name="PlantsWatering" expanded="True" />
+                <Node name="Rocket" expanded="True" />
                 <Node name="Singing" expanded="True">
-                  <Node name="NotesControlling.cs" selected="True" />
+                  <Node name="NotesEndOfLine.cs" selected="True" />
                 </Node>
               </Node>
             </Node>

@@ -962,6 +962,11 @@ MonoBehaviour:
     volume: 0.44
     pitch: 0
     source: {fileID: 0}
+  - name: WrongNote
+    clip: {fileID: 8300000, guid: 9f3b0f21d62564bd683499d9bc0b37a9, type: 3}
+    volume: 0.44
+    pitch: 0
+    source: {fileID: 0}
 --- !u!4 &1392669111
 Transform:
   m_ObjectHideFlags: 0
