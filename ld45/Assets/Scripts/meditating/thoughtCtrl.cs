@@ -18,6 +18,7 @@ public class thoughtCtrl : MonoBehaviour
 
         isLeft = transform.position.x <= 0;
 
+        InvokeRepeating("Breath", 2.0f, 1);
     }
 
     void Update()
@@ -35,6 +36,7 @@ public class thoughtCtrl : MonoBehaviour
     }
     void Explode()
     {
+        FindObjectOfType<AudioManager>().Play("Plop");
         GameObject exp=Instantiate(explosion);
         exp.transform.position=transform.position;
         Destroy(exp,2);
@@ -47,5 +49,15 @@ public class thoughtCtrl : MonoBehaviour
             gm.GetComponent<meditating>().DecreaseLives();
             Explode();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        FindObjectOfType<AudioManager>().Play("Scared");
+    }
+
+    private void Breath()
+    {
+        FindObjectOfType<AudioManager>().Play("Breath");
     }
 }
