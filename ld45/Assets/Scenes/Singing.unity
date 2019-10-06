@@ -652,6 +652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4341cfe86162d4afba92cd4c6acc57fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notesToGenerateMaxs: {x: 20, y: 35}
   notesToGenerate: 17
   notesSpeed: 1
   notesSpeedingUp: 0.06

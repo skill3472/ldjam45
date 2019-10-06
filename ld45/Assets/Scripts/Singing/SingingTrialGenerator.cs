@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SingingTrialGenerator : MonoBehaviour
 {
+    public Vector2 notesToGenerateMaxs;
     public int notesToGenerate = 30;
     public float notesSpeed;
     public float notesSpeedingUp;
@@ -20,7 +21,8 @@ public class SingingTrialGenerator : MonoBehaviour
 
     void Start()
     {   
-        SetRandomMargin();   
+        SetRandomMargin();
+        notesToGenerate = (int)Random.Range(notesToGenerateMaxs.x, notesToGenerateMaxs.y);
     }
 
     void Update()
