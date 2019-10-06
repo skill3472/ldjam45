@@ -419,12 +419,12 @@ MonoBehaviour:
   sounds:
   - name: Start
     clip: {fileID: 8300000, guid: 39a28ce2b0c001b4eb4aed38171476b6, type: 3}
-    volume: 0.136
+    volume: 0.23
     pitch: 0
     source: {fileID: 0}
   - name: Breath
     clip: {fileID: 8300000, guid: ba303168ddeb8e04cb847f7b705d3052, type: 3}
-    volume: 0.223
+    volume: 0.051
     pitch: 0
     source: {fileID: 0}
   - name: Plop
@@ -434,17 +434,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Scared
     clip: {fileID: 8300000, guid: cb7c55201d5800748bd70b4fec3909ca, type: 3}
-    volume: 0.166
+    volume: 0.383
     pitch: 0
     source: {fileID: 0}
   - name: Whispers
     clip: {fileID: 8300000, guid: 9fa334e8a3ebd2c429e40908bebe2220, type: 3}
-    volume: 0.083
-    pitch: 0
-    source: {fileID: 0}
-  - name: Back
-    clip: {fileID: 8300000, guid: 1c43e42958641461f8d3bbf2dce08555, type: 3}
-    volume: 0.117
+    volume: 0.386
     pitch: 0
     source: {fileID: 0}
   - name: Presplash
