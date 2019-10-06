@@ -18,6 +18,13 @@ public class WaterMonk : MonoBehaviour
     private int _dir = -1;
     public SpriteRenderer spriteRenderer;
 
+    private float timeToNextSound;
+
+    private void Start()
+    {
+        timeToNextSound = 1 / speed;
+    }
+
     private void Update()
     {
         if (transform.position.x > maxLeftMove.position.x && _dir < 0)
@@ -33,6 +40,8 @@ public class WaterMonk : MonoBehaviour
         if(speed < maxSpeed)
             speed += Time.deltaTime * speedingUp;
         spriteRenderer.flipX = _dir < 0;
+        timeToNextSound -= Time.deltaTime;
+        if (timeToNextSound <= 0) PlayRandomFootstep();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,6 +57,14 @@ public class WaterMonk : MonoBehaviour
     public void ChangeSprite(bool isWatering)
     {
         spriteRenderer.sprite = (isWatering) ? wateringSprite : standardSprite;
+    }
+
+    private void PlayRandomFootstep()
+    {
+        string n = "footestep" + Random.Range(1, 11);
+            Debug.Log(n);
+        FindObjectOfType<AudioManager>().Play(n);
+        timeToNextSound = .3f;
     }
 
 }

@@ -200,6 +200,125 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &96853913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 96853915}
+  - component: {fileID: 96853914}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &96853914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96853913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a3c5610ba2f4b0bbfdb5bafc153309, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: TooMuchWater1
+    clip: {fileID: 8300000, guid: 9d904dcaa943e4f7996b9c01d052b58d, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: TooMuchWater2
+    clip: {fileID: 8300000, guid: d9c801d46de584b59931f9caa45dcc91, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: PlantReady
+    clip: {fileID: 8300000, guid: df5cc76a03ed241e69c600b1d5e97429, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: Watering
+    clip: {fileID: 8300000, guid: 2a9cf64ccc535480b857ab273b5d35db, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep1
+    clip: {fileID: 8300000, guid: c9133a0797eaf4974bf1fc35829e3144, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep2
+    clip: {fileID: 8300000, guid: 65137da9a1ec44d4a89134e465b9d309, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep3
+    clip: {fileID: 8300000, guid: b698ad873a59a41eab69e62c25ca72b5, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep4
+    clip: {fileID: 8300000, guid: 81c3ab6ae7a66422aa07653b9163b318, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep5
+    clip: {fileID: 8300000, guid: 42c31df70e03a45319d9f7a5bbfdc878, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep6
+    clip: {fileID: 8300000, guid: 313d75e88d27e45dc831134e255f3c3d, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep7
+    clip: {fileID: 8300000, guid: f5d8dabb38830459eb731754427b8ee3, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep8
+    clip: {fileID: 8300000, guid: a9eaa6f4976c445e0a457fc7d28f9c49, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep9
+    clip: {fileID: 8300000, guid: 861165a75dd7b4312aae9eaab35e05ca, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep10
+    clip: {fileID: 8300000, guid: 1ec0321cba6ee47d2bcf4333edc3426c, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+  - name: footestep11
+    clip: {fileID: 8300000, guid: 014e91b3afe3344efa58108b6f0f6e5e, type: 3}
+    volume: 1
+    pitch: 0.3
+    source: {fileID: 0}
+--- !u!4 &96853915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96853913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &130562090
 GameObject:
   m_ObjectHideFlags: 0
