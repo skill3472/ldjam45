@@ -22,7 +22,7 @@ public class SingingTrialGenerator : MonoBehaviour
     void Start()
     {   
         SetRandomMargin();
-        notesToGenerate = (int)Random.Range(notesToGenerateMaxs.x, notesToGenerateMaxs.y);
+        notesToGenerate = (int) Random.Range(notesToGenerateMaxs.x, notesToGenerateMaxs.y);
     }
 
     void Update()
