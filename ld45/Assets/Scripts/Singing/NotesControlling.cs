@@ -34,27 +34,32 @@ public class NotesControlling : MonoBehaviour
         timeFromLastNote += Time.deltaTime;
 
         if (Input.GetMouseButtonDown(0)){
-            if (actualNote != null){
-                if (lastDoneNote != null){
-                    if (singingTrialGenerator.notes.IndexOf(lastDoneNote)
-                        == singingTrialGenerator.notes.IndexOf(actualNote) - 1)
-                    {
-                        actualNote.Done(timeFromLastNote, pointsPerNote);
-                        timeFromLastNote = 0;
-                        lastDoneNote = actualNote;
-                    }
-                    else
-                        MissClick();
-                }else {
-                    if (singingTrialGenerator.notes.IndexOf(actualNote) == 0){
-                        actualNote.Done(timeFromLastNote, pointsPerNote);
-                        timeFromLastNote = 0;
-                        lastDoneNote = actualNote;
-                    }
-                    else
-                        MissClick();
-                }
-            }else
+            //if (actualNote != null){
+            //    if (lastDoneNote != null){
+            //        if (singingTrialGenerator.notes.IndexOf(lastDoneNote)
+            //            == singingTrialGenerator.notes.IndexOf(actualNote) - 1)
+            //        {
+            //            actualNote.Done(timeFromLastNote, pointsPerNote);
+            //            timeFromLastNote = 0;
+            //            lastDoneNote = actualNote;
+            //        }
+            //        else
+            //            MissClick();
+            //    }else {
+            //        if (singingTrialGenerator.notes.IndexOf(actualNote) == 0){
+            //            actualNote.Done(timeFromLastNote, pointsPerNote);
+            //            timeFromLastNote = 0;
+            //            lastDoneNote = actualNote;
+            //        }
+            //        else
+            //            MissClick();
+            //    }
+            //}else
+            //    MissClick();
+
+            if (actualNote != null)
+                actualNote.Done(timeFromLastNote, pointsPerNote);
+            else
                 MissClick();
         }
             

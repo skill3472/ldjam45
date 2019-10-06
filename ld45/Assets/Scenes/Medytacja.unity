@@ -805,7 +805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4a228705c854d85b71048417094fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsText: {fileID: 663561806}
   prefixOfText: 'Points: '
 --- !u!1 &1657102836
 GameObject:
@@ -897,6 +896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 1470747932231940154, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1470747932231940157, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -950,6 +954,11 @@ PrefabInstance:
     - target: {fileID: 1470747932231940157, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470747931540706724, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
