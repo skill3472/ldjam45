@@ -36,6 +36,7 @@ public class meditating : MonoBehaviour
         lives = 3;
     	points = 0;
         LocalDifficulty = 1f;
+        FindObjectOfType<AudioManager>().Play("Presplash");
     }
 
     void Update()

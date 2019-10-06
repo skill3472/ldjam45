@@ -447,6 +447,11 @@ MonoBehaviour:
     volume: 0.117
     pitch: 0
     source: {fileID: 0}
+  - name: Presplash
+    clip: {fileID: 8300000, guid: 80fd025f7e6ab4f1bbafbdb9c6e31af4, type: 3}
+    volume: 0.389
+    pitch: 0
+    source: {fileID: 0}
 --- !u!4 &554029511
 Transform:
   m_ObjectHideFlags: 0
