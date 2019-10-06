@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public CameaBahaviourHandler _camera;
 
     public void GameEnd()
     {
-        SceneManager.LoadScene(Random.Range(2,4));
+        _camera.FadeOut();
     }
 }

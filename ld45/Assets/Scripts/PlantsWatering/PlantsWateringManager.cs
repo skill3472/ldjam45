@@ -13,9 +13,6 @@ public class PlantsWateringManager : MonoBehaviour
 
     public WaterMonk monk;
 
-    public Transform winTestSprite;
-    public Transform gameOverTestSprite;
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -38,14 +35,12 @@ public class PlantsWateringManager : MonoBehaviour
     private void Win()
     {
         if (!isPlaying) return;
-        Instantiate(winTestSprite, transform);
         Invoke("GameEnd", 0.3f);
     }
 
     public void GameOver()
     {
         if (!isPlaying) return;
-        Instantiate(gameOverTestSprite, transform);
         Invoke("GameEnd", 0.3f);
     }
 
