@@ -247,62 +247,62 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Watering
     clip: {fileID: 8300000, guid: c9ed1ff572738d64694ea800210d2f42, type: 3}
-    volume: 0.457
+    volume: 1
     pitch: 0.187
     source: {fileID: 0}
   - name: footestep1
     clip: {fileID: 8300000, guid: c9133a0797eaf4974bf1fc35829e3144, type: 3}
-    volume: 0.324
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep2
     clip: {fileID: 8300000, guid: 65137da9a1ec44d4a89134e465b9d309, type: 3}
-    volume: 0.312
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep3
     clip: {fileID: 8300000, guid: b698ad873a59a41eab69e62c25ca72b5, type: 3}
-    volume: 0.292
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep4
     clip: {fileID: 8300000, guid: 81c3ab6ae7a66422aa07653b9163b318, type: 3}
-    volume: 0.332
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep5
     clip: {fileID: 8300000, guid: 42c31df70e03a45319d9f7a5bbfdc878, type: 3}
-    volume: 0.332
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep6
     clip: {fileID: 8300000, guid: 313d75e88d27e45dc831134e255f3c3d, type: 3}
-    volume: 0.376
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep7
     clip: {fileID: 8300000, guid: f5d8dabb38830459eb731754427b8ee3, type: 3}
-    volume: 0.352
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep8
     clip: {fileID: 8300000, guid: a9eaa6f4976c445e0a457fc7d28f9c49, type: 3}
-    volume: 0.336
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep9
     clip: {fileID: 8300000, guid: 861165a75dd7b4312aae9eaab35e05ca, type: 3}
-    volume: 0.296
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep10
     clip: {fileID: 8300000, guid: 1ec0321cba6ee47d2bcf4333edc3426c, type: 3}
-    volume: 0.32
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: footestep11
     clip: {fileID: 8300000, guid: 014e91b3afe3344efa58108b6f0f6e5e, type: 3}
-    volume: 0.4
+    volume: 1
     pitch: 0.1
     source: {fileID: 0}
   - name: Start
@@ -315,6 +315,7 @@ MonoBehaviour:
     volume: 1
     pitch: 0.1919
     source: {fileID: 0}
+<<<<<<< HEAD
   - name: Back
     clip: {fileID: 8300000, guid: f6ac3983c0adc46efa73b768067ea2bf, type: 3}
     volume: 0.444
@@ -325,6 +326,8 @@ MonoBehaviour:
     volume: 0.288
     pitch: 0.2047
     source: {fileID: 0}
+=======
+>>>>>>> parent of 2331133... Fixed some sounds
 --- !u!4 &96853915
 Transform:
   m_ObjectHideFlags: 0
