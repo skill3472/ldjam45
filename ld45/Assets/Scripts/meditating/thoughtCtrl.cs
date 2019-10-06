@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class thoughtCtrl : MonoBehaviour
 {
-	private GameObject gm;
+	private GameObject gm,monksHead;
 	[SerializeField]
 	private bool isLeft;
     public Sprite[] thoughtsPossible;
