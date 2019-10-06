@@ -19,10 +19,13 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void Play(string name)
+    public void Play(string name, bool mindPlaying = false)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if(!s.source.isPlaying)
+        if (!mindPlaying)
             s.source.Play();
+        else
+            if(!s.source.isPlaying)
+                s.source.Play();
     }
 }
