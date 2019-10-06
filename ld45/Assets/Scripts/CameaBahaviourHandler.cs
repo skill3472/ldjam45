@@ -47,5 +47,6 @@ public class CameaBahaviourHandler : MonoBehaviour
             pos.z = -5;
         }
         TextMesh t = Instantiate(pointsEffect, pos, transform.rotation);
+        t.text = points;
     }
 }

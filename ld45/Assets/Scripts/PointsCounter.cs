@@ -26,7 +26,7 @@ public class PointsCounter : MonoBehaviour
 
     public void AddPoints(int amount, Vector3 pos)
     {
-        Camera.main.GetComponent<CameaBahaviourHandler>().MakePointsEffect("+" + points * combo, pos);
+        Camera.main.GetComponent<CameaBahaviourHandler>().MakePointsEffect((points * combo).ToString(), pos);
         points += amount * combo;
         SetText();
     }

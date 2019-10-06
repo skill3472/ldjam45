@@ -32,6 +32,7 @@ public class NotesEndOfLine : MonoBehaviour
                 thisNote.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0);
                 FindObjectOfType<AudioManager>().Play("WrongNote");
                 _cam.Shake();
+                singingTrialGenerator.notesControlling.pointsCounter.AddPoints(-50, collision.gameObject.transform.position);
             }
             Destroy(collision.gameObject, 0.1f);
         }
