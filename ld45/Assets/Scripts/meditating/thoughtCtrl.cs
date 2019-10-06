@@ -10,7 +10,7 @@ public class thoughtCtrl : MonoBehaviour
 	private bool isLeft;
     public Sprite[] thoughtsPossible;
 	//public float movementTick;
-
+    
     void Start()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[Random.Range(0,8)];
