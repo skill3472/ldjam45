@@ -30,8 +30,10 @@ public class Note : MonoBehaviour
 
     public void Done(float time, int points)
     {
+        if (isDone) return;
         isDone = true;
         Instantiate(doneEffect, transform);
+        GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
         if (time <= .5f) _pointsCounter.AddCombo();
         else _pointsCounter.DecreaseCombo();
