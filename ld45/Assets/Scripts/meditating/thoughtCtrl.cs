@@ -31,10 +31,10 @@ public class thoughtCtrl : MonoBehaviour
     void OnMouseDown()
     {
     	Explode();
+        gm.GetComponent<meditating>().AddPoints(100);
     }
     void Explode()
     {
-        gm.GetComponent<meditating>().AddPoints(100);
         GameObject exp=Instantiate(explosion);
         exp.transform.position=transform.position;
         Destroy(exp,2);
