@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentPlant: {fileID: 3387934888576521301}
+  lineY: 2.5
+  background: {fileID: 5441475724095044160}
 --- !u!1 &7110715372135854937
 GameObject:
   m_ObjectHideFlags: 0

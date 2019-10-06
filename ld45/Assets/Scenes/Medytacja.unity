@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.93979645, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -996,9 +996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4a228705c854d85b71048417094fa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
-  combo: 1
-  maxCombo: 8
   pointsText: {fileID: 663561806}
   prefixOfText: 'Points: '
 --- !u!1 &1657102836
