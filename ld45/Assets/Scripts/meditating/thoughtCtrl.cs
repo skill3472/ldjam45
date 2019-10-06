@@ -9,6 +9,7 @@ public class thoughtCtrl : MonoBehaviour
 	[SerializeField]
 	private bool isLeft;
     public Sprite[] thoughtsPossible;
+    public GameObject explosion;
     
     void Start()
     {
@@ -29,16 +30,22 @@ public class thoughtCtrl : MonoBehaviour
 
     void OnMouseDown()
     {
-        gm.GetComponent<meditating>().AddPoints(100);
-    	Destroy(gameObject);
+    	Explode();
     }
-
+    void Explode()
+    {
+        gm.GetComponent<meditating>().AddPoints(100);
+        GameObject exp=Instantiate(explosion);
+        exp.transform.position=transform.position;
+        Destroy(exp,2);
+        Destroy(this.gameObject);
+    }
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.tag == "Head")
         {
             gm.GetComponent<meditating>().lives--;
-            Destroy(gameObject);
+            Explode();
         }
     }
 }
