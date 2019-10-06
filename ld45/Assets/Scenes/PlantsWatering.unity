@@ -420,6 +420,7 @@ MonoBehaviour:
   isPlaying: 1
   plantsToWater: 0
   monk: {fileID: 2075352669}
+  _cam: {fileID: 0}
 --- !u!114 &296347281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1558,6 +1559,11 @@ PrefabInstance:
     - target: {fileID: 1470747932231940157, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470747931540706723, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1470747931540706724, guid: 2ea44979e61fc435d8fc6d38aef0cbbc,

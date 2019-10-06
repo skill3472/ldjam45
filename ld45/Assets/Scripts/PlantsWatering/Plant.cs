@@ -7,10 +7,14 @@ public class Plant : MonoBehaviour
 {
     public bool state = true;
     public bool isDone;
+    public bool isTooMuch;
     public bool isFocused;
     public GameObject focusEffect;
     public int waterLevel = 1;
-    public int maxWaterLevel = 5;
+    [HideInInspector]
+    public int maxWaterLevel;
+
+    public List<Sprite> growStates;
 
     private PlantsWateringManager _plantsWateringManager;
 
@@ -21,9 +25,13 @@ public class Plant : MonoBehaviour
         _spiteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _plantsWateringManager = FindObjectOfType<PlantsWateringManager>();
 
-        waterLevel = Random.Range(2, 4);
 
-        if(state)
+        maxWaterLevel = growStates.Count;
+
+        waterLevel = Random.Range(1, maxWaterLevel-1);
+        SetWaterLevel(waterLevel);
+
+        if (state)
             _plantsWateringManager.plantsToWater++;
     }
 
@@ -37,15 +45,15 @@ public class Plant : MonoBehaviour
 
         if(waterLevel == maxWaterLevel)
         {
-            waterLevel = 1;
-            _plantsWateringManager.plantsToWater++;
-            _plantsWateringManager.pointsCounter.AddPoints(-50);
+            isTooMuch = true;
+            _spiteRenderer.sprite = growStates[growStates.Count-1];
+            _plantsWateringManager._cam.Shake();
+            _plantsWateringManager.pointsCounter.AddPoints(-80);
         }
+        if (isDone) return;
 
         if (waterLevel > maxWaterLevel)
-        {
             return;
-        }
        
         waterLevel++;
         _plantsWateringManager.pointsCounter.AddPoints(20);
@@ -86,5 +94,11 @@ public class Plant : MonoBehaviour
         //    AddWater();
         //else
         //    Dead();
+    }
+
+    private void SetWaterLevel(int level)
+    {
+        waterLevel = level;
+        _spiteRenderer.sprite = growStates[waterLevel];
     }
 }

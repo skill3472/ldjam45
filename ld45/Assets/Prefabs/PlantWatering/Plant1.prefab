@@ -615,6 +615,11 @@ MonoBehaviour:
   focusEffect: {fileID: 3872511888739530077}
   waterLevel: 1
   maxWaterLevel: 5
+  growStates:
+  - {fileID: 21300000, guid: 6f891180ffb39446794ffd6bae3a4c1b, type: 3}
+  - {fileID: 21300000, guid: 8325a189570334e59a54e16b93b75de7, type: 3}
+  - {fileID: 21300000, guid: 003e2c3d709cf4107a95c68d79fcd073, type: 3}
+  - {fileID: 21300000, guid: 379d78628f96e4ed3a2e046169ee7719, type: 3}
 --- !u!61 &-5915208704353255966
 BoxCollider2D:
   m_ObjectHideFlags: 0

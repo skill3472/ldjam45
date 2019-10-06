@@ -13,6 +13,13 @@ public class PlantsWateringManager : MonoBehaviour
 
     public WaterMonk monk;
 
+    public CameaBahaviourHandler _cam;
+
+    private void Start()
+    {
+        _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -29,7 +36,7 @@ public class PlantsWateringManager : MonoBehaviour
         plantsToWater--;
         pointsCounter.AddPoints(pointsPerWaterdPlant);
         if (plantsToWater <= 0)
-            Win();
+            Invoke("Win", 0.3f);
     }
 
     private void Win()
@@ -40,6 +47,7 @@ public class PlantsWateringManager : MonoBehaviour
 
     public void GameOver()
     {
+        _cam.Shake();
         if (!isPlaying) return;
         Invoke("GameEnd", 0.3f);
     }

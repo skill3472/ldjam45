@@ -24,12 +24,15 @@ public class PlantWaterLevelLine : MonoBehaviour
         _posChangePerLevel = xLineValue / parentPlant.maxWaterLevel;
         background.SetPosition(1, new Vector2(_lineRenderer.GetPosition(1).x, lineY));
         background.SetPosition(0, new Vector2(_lineRenderer.GetPosition(0).x, lineY));
+
+        SetLineCoordinates();
     }
 
     private void Update()
     {
         if (parentPlant.waterLevel * _posChangePerLevel < xLineValue / 2 || parentPlant.waterLevel * _posChangePerLevel > xLineValue / 2)
             SetLineCoordinates();
+        if (parentPlant.isTooMuch) gameObject.SetActive(false);
     }
 
     private void SetLineCoordinates()
