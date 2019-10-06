@@ -9,8 +9,10 @@ public class RocketController : MonoBehaviour
     private GameObject laser;
     private Rigidbody2D rb2d;
     [SerializeField]
-    private float speed,hp,ammo;
-    bool canShoot=true;
+    private float speed,hp;
+    public float ammo=0;
+    [SerializeField]
+    bool canShoot=true,isShooting=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,12 +35,16 @@ public class RocketController : MonoBehaviour
     IEnumerator Shoot()
     {
         yield return new WaitForSeconds(0.3f);
-        ammo--;
-        GameObject newLaser=Instantiate(laser);
-        newLaser.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,12));
-        newLaser.GetComponent<Rigidbody2D>().gravityScale=-8;
-        newLaser.transform.position=transform.position;
-        Destroy(newLaser,2);
+        if(isShooting)
+        {
+            ammo--;
+            GameObject newLaser=Instantiate(laser);
+            newLaser.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,12));
+            newLaser.GetComponent<Rigidbody2D>().gravityScale=-8;
+            newLaser.transform.position=transform.position;
+            Destroy(newLaser,2);
+            
+        }
         if(ammo>0)
             StartCoroutine(Shoot());
         else
