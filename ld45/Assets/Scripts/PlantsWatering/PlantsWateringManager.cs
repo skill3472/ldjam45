@@ -17,7 +17,6 @@ public class PlantsWateringManager : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<AudioManager>().Play("Start");
         _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
     }
 
@@ -26,6 +25,11 @@ public class PlantsWateringManager : MonoBehaviour
         if (!isPlaying)
         {
             isPlaying = gameManger.isPlaying;
+            if(isPlaying)
+            {
+                FindObjectOfType<AudioManager>().Play("Start");
+                FindObjectOfType<AudioManager>().Play("Back");
+            }
             return;
         }
         if (Input.GetMouseButtonDown(0))
