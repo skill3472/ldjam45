@@ -5,6 +5,8 @@ using UnityEngine;
 public class WaterMonk : MonoBehaviour
 {
     public Plant actualPlant;
+    public Sprite standardSprite;
+    public Sprite wateringSprite;
 
     public float speed;
     public float speedingUp;
@@ -44,6 +46,11 @@ public class WaterMonk : MonoBehaviour
             actualPlant = collision.gameObject.GetComponent<Plant>();
             actualPlant.Focus();
         }
+    }
+
+    public void ChangeSprite(bool isWatering)
+    {
+        _spriteRenderer.sprite = (isWatering) ? wateringSprite : standardSprite;
     }
 
 }
