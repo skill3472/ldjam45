@@ -22,8 +22,18 @@ public class CameaBahaviourHandler : MonoBehaviour
         _animator.SetTrigger("FadeOut");
     }
 
+    public void FadeInDone()
+    {
+        _animator.SetBool("FadeIn", false);
+    }
+
     public void ChangeScene()
     {
         SceneManager.LoadScene(Random.Range(2, 4));
+    }
+
+    public void Shake()
+    {
+        _animator.SetTrigger("CameraShake");
     }
 }
