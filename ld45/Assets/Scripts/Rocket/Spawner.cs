@@ -15,6 +15,6 @@ public class Spawner : MonoBehaviour
     {
         GameObject newObj=Instantiate(objectsToSpawn[Random.Range(0,objectsToSpawn.Count-1)]);
         yield return new WaitForSeconds(3);
-        spawnThings();
+        StartCoroutine(spawnThings());
     }
 }
