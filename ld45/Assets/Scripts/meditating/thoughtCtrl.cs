@@ -22,7 +22,13 @@ public class thoughtCtrl : MonoBehaviour
 
     void Update()
     {
-    	transform.Translate(transform.right * Time.deltaTime * (isLeft ? 2 : -2));
+    	//Nie zmieniać nazwy!!
+        monksHead=GameObject.Find("HeadPosition");
+    	//transform.Translate(transform.right * Time.deltaTime * (isLeft ? 2 : -2));
+        float step = 3 * Time.deltaTime;
+
+        // move sprite towards the target location
+        transform.position = Vector2.MoveTowards(transform.position, monksHead.transform.position, step);
     }
 
     void OnMouseDown()
