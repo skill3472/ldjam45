@@ -25,13 +25,14 @@ public class RocketController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * speed);
         if(ammo>0&&canShoot)
         {
+            animator.SetBool("isOpened",true);
             StartCoroutine(Shoot());
             canShoot=false;
         }
     }
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         ammo--;
         GameObject newLaser=Instantiate(laser);
         newLaser.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,12));
@@ -40,5 +41,10 @@ public class RocketController : MonoBehaviour
         Destroy(newLaser,2);
         if(ammo>0)
             StartCoroutine(Shoot());
+        else
+        {
+            animator.SetBool("isOpened",false);
+            canShoot=true;
+        }
     }
 }
