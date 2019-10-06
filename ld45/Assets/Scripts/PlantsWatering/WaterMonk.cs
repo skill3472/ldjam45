@@ -9,18 +9,14 @@ public class WaterMonk : MonoBehaviour
     public Sprite wateringSprite;
 
     public float speed;
+    public float maxSpeed = 6;
     public float speedingUp;
 
     public Transform maxLeftMove;
     public Transform maxRightMove;
 
     private int _dir = -1;
-    private SpriteRenderer _spriteRenderer;
-
-    private void Start()
-    {
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-    }
+    public SpriteRenderer spriteRenderer;
 
     private void Update()
     {
@@ -34,8 +30,9 @@ public class WaterMonk : MonoBehaviour
             transform.position += new Vector3(Time.deltaTime * speed, 0);
             if (transform.position.x >= maxRightMove.position.x) _dir = -1;
         }
-        speed += Time.deltaTime * speedingUp;
-        _spriteRenderer.flipX = (_dir < 0);
+        if(speed < maxSpeed)
+            speed += Time.deltaTime * speedingUp;
+        spriteRenderer.flipX = _dir < 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,7 +47,7 @@ public class WaterMonk : MonoBehaviour
 
     public void ChangeSprite(bool isWatering)
     {
-        _spriteRenderer.sprite = (isWatering) ? wateringSprite : standardSprite;
+        spriteRenderer.sprite = (isWatering) ? wateringSprite : standardSprite;
     }
 
 }
