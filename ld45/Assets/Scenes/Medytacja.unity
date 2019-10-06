@@ -152,7 +152,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.21}
   serializedVersion: 2
-  m_Radius: 4.59
+  m_Radius: 2.4
 --- !u!4 &219993888
 Transform:
   m_ObjectHideFlags: 0
@@ -575,6 +575,7 @@ GameObject:
   - component: {fileID: 846012978}
   - component: {fileID: 846012981}
   - component: {fileID: 846012980}
+  - component: {fileID: 846012982}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -694,6 +695,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &846012982
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846012977}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f39e7da29b648484aa1527bd3a6a0788, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &861225928
 GameObject:
   m_ObjectHideFlags: 0
