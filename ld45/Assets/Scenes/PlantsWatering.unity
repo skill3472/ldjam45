@@ -307,7 +307,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Start
     clip: {fileID: 8300000, guid: 7e98d92e2dd34d64296235721a0c40e3, type: 3}
-    volume: 1
+    volume: 0.154
     pitch: 0.1919
     source: {fileID: 0}
 --- !u!4 &96853915
