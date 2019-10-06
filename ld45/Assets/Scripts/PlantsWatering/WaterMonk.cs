@@ -64,7 +64,7 @@ public class WaterMonk : MonoBehaviour
         string n = "footestep" + Random.Range(1, 11);
             Debug.Log(n);
         FindObjectOfType<AudioManager>().Play(n);
-        timeToNextSound = .3f;
+        timeToNextSound = 1/speed*2;
     }
 
 }
