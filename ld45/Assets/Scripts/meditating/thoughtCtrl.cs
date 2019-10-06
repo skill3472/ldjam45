@@ -15,6 +15,7 @@ public class thoughtCtrl : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = thoughtsPossible[Random.Range(0,8)];
     	gm = GameObject.Find("_GM");
+        FindObjectOfType<AudioManager>().Play("Whispers");
 
         isLeft = transform.position.x <= 0;
 

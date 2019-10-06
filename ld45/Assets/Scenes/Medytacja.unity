@@ -259,7 +259,7 @@ MonoBehaviour:
   sounds:
   - name: Start
     clip: {fileID: 8300000, guid: 39a28ce2b0c001b4eb4aed38171476b6, type: 3}
-    volume: 0.453
+    volume: 0.385
     pitch: 0
     source: {fileID: 0}
   - name: Breath
