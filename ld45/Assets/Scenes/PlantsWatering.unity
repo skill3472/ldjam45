@@ -402,6 +402,9 @@ MonoBehaviour:
   plantsTypes:
   - {fileID: 3387934888576521301, guid: 2fc3bf2bda882462dbfb3c0e3fe663ab, type: 3}
   - {fileID: 3989758478006679105, guid: be1a54a9b0ddb4d7295c3b43bd473469, type: 3}
+  - {fileID: 1283459227294140180, guid: faf815e578a324cb29a7bcccd9384949, type: 3}
+  - {fileID: 7578555847548143095, guid: 04dc686028be549e088ac148daec2fe2, type: 3}
+  - {fileID: 9069713347769258392, guid: 9770d5a9384d04fb1af3a63481448796, type: 3}
 --- !u!114 &296347280
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,10 +26,11 @@ public class Plant : MonoBehaviour
         _plantsWateringManager = FindObjectOfType<PlantsWateringManager>();
 
 
-        maxWaterLevel = growStates.Count;
+        maxWaterLevel = growStates.Count-2;
 
-        waterLevel = Random.Range(1, maxWaterLevel-1);
+        waterLevel = Random.Range(1, maxWaterLevel-2);
         SetWaterLevel(waterLevel);
+        _spiteRenderer.sprite = growStates[waterLevel];
 
         if (state)
             _plantsWateringManager.plantsToWater++;
@@ -55,7 +56,7 @@ public class Plant : MonoBehaviour
         if (waterLevel > maxWaterLevel)
             return;
        
-        waterLevel++;
+        SetWaterLevel(waterLevel+1);
         _plantsWateringManager.pointsCounter.AddPoints(20);
         if (waterLevel >= maxWaterLevel) Done();
 
