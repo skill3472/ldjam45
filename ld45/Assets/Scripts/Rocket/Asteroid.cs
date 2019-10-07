@@ -17,6 +17,7 @@ public class Asteroid : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.transform.tag=="bullet")
         {
+            FindObjectOfType<AudioManager>().Play("Explode");
             Death();
         }    
     }

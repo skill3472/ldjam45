@@ -8,6 +8,7 @@ public class SitutationExplainer : MonoBehaviour
     {
         FindObjectOfType<AudioManager>().Play("Music", true);
         InvokeRepeating("Music", 2f, 1);
+        Cursor.visible = true;
     }
     void Update()
     {

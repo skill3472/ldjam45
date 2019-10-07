@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GmRocket : MonoBehaviour
 {
+    public RocketController rocket;
     public static GmRocket instance;
     public float speed;
     private GameObject background;
@@ -22,6 +23,7 @@ public class GmRocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!rocket.isPlaying) return;
         if(rb2dOfBack.velocity.magnitude<-speed)
         {
             rb2dOfBack.drag=1;

@@ -13,6 +13,7 @@ TagManager:
   - bullet
   - player
   - asteroid
+  - Battery
   layers:
   - Default
   - TransparentFX
