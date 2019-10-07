@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Intro.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Rocket/RocketController.cs">
     <Files>
       <File FileName="Assets/Scripts/meditating/meditating.cs" Line="97" Column="27" />
       <File FileName="Assets/Scripts/meditating/thoughtCtrl.cs" Line="21" Column="44" />
@@ -13,9 +13,10 @@
       <File FileName="Assets/Scripts/Rocket/SpaceLayers.cs" />
       <File FileName="Assets/Scripts/Singing/Note.cs" />
       <File FileName="Assets/Scripts/Singing/NotesEndOfLine.cs" Line="26" Column="19" />
-      <File FileName="Assets/Scripts/CameaBahaviourHandler.cs" Line="42" Column="33" />
       <File FileName="Assets/Scripts/PointsCounter.cs" Line="24" Column="20" />
-      <File FileName="Assets/Scripts/Intro.cs" Line="7" Column="16" />
+      <File FileName="Assets/Scripts/CameaBahaviourHandler.cs" Line="42" Column="33" />
+      <File FileName="Assets/Scripts/Intro.cs" Line="18" Column="73" />
+      <File FileName="Assets/Scripts/Rocket/RocketController.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,9 +26,10 @@
               <Node name="Scripts" expanded="True">
                 <Node name="meditating" expanded="True" />
                 <Node name="PlantsWatering" expanded="True" />
-                <Node name="Rocket" expanded="True" />
+                <Node name="Rocket" expanded="True">
+                  <Node name="RocketController.cs" selected="True" />
+                </Node>
                 <Node name="Singing" expanded="True" />
-                <Node name="Intro.cs" selected="True" />
               </Node>
             </Node>
           </Node>
