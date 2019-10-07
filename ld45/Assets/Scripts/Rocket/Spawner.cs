@@ -24,7 +24,7 @@ public class Spawner : MonoBehaviour
             GameObject newBattery=Instantiate(battery);
             newBattery.transform.position=this.transform.position;
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.6f);
         StartCoroutine(spawnThings());
     }
 }
