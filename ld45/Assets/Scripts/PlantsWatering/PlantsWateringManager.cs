@@ -27,7 +27,10 @@ public class PlantsWateringManager : MonoBehaviour
         {
             isPlaying = gameManger.isPlaying;
             if(isPlaying)
+            {
                 FindObjectOfType<AudioManager>().Play("Start");
+                FindObjectOfType<AudioManager>().Play("Music");
+            }
             return;
         }
         if (Input.GetMouseButtonDown(0))
