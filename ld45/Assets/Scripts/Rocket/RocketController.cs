@@ -42,14 +42,9 @@ public class RocketController : MonoBehaviour
     IEnumerator landing()
     {
         rb2d.AddForce(new Vector2(0,99));
-<<<<<<< HEAD
-        yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("Singing");
-=======
         
         yield return new WaitForSeconds(1f);
         Camera.main.GetComponent<CameaBahaviourHandler>().FadeOut();
->>>>>>> 8af328522d9e0db3374bd5206cab876400d99fb0
     }
     IEnumerator ded()
     {
