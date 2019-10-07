@@ -5,6 +5,7 @@ using UnityEngine.Video;
 [RequireComponent(typeof(VideoPlayer))]
 public class Intro : MonoBehaviour
 {
+    public GameObject fixer;
     private VideoPlayer _videoPlayer;
 
     void Start()
@@ -15,6 +16,7 @@ public class Intro : MonoBehaviour
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        Camera.main.GetComponent<CameaBahaviourHandler>().ChangeScene();
+        fixer.SetActive(false);
+        Camera.main.GetComponent<CameaBahaviourHandler>().FadeOut();
     }
 }
