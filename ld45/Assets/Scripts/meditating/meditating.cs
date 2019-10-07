@@ -47,6 +47,7 @@ public class meditating : MonoBehaviour
             if (isPlaying)
             {
                 FindObjectOfType<AudioManager>().Play("Start");
+                InvokeRepeating("Breath", 2.0f, 1);
             }
             return;
         }
@@ -81,8 +82,6 @@ public class meditating : MonoBehaviour
 
     public void Loose()
     {
-        Debug.Log("u r dead");
-
         Invoke("EndGame", 0.3f);
     }
 
@@ -100,9 +99,14 @@ public class meditating : MonoBehaviour
 
     public void DecreaseLives()
     {
-        //whispers.Play(); NIE DZIAŁA
+        FindObjectOfType<AudioManager>().Play("Whispers", true);
         lives--;
         _cam.Shake();
+    }
+
+    private void Breath()
+    {
+        FindObjectOfType<AudioManager>().Play("Breath", true);
     }
 
 }
