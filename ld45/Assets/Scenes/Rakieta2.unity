@@ -15307,7 +15307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24ae98bd712c9c94fb158cde33e2a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSpeed: 3
+  changeSpeed: 4
   lastLayer: 0
 --- !u!61 &1900375658
 BoxCollider2D:
@@ -15802,6 +15802,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1758964281854097598, guid: aee3b08622bf87f4ab4b0166f6299a4e,
+        type: 3}
+      propertyPath: m_Name
+      value: tlorakieta
+      objectReference: {fileID: 0}
     - target: {fileID: 1758964281854097596, guid: aee3b08622bf87f4ab4b0166f6299a4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15857,15 +15862,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1758964281854097598, guid: aee3b08622bf87f4ab4b0166f6299a4e,
-        type: 3}
-      propertyPath: m_Name
-      value: tlorakieta
-      objectReference: {fileID: 0}
     - target: {fileID: 1758964281854097597, guid: aee3b08622bf87f4ab4b0166f6299a4e,
         type: 3}
       propertyPath: m_SortingOrder
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1758964282096518422, guid: aee3b08622bf87f4ab4b0166f6299a4e,
+        type: 3}
+      propertyPath: changeSpeed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1758964281992474285, guid: aee3b08622bf87f4ab4b0166f6299a4e,
         type: 3}
