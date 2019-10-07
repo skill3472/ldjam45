@@ -7,6 +7,8 @@ public class NotesEndOfLine : MonoBehaviour
     public SingingTrialGenerator singingTrialGenerator;
     private CameaBahaviourHandler _cam;
 
+    private GameObject _go;
+
     private void Start()
     {
        _cam = Camera.main.gameObject.GetComponent<CameaBahaviourHandler>();
@@ -21,8 +23,8 @@ public class NotesEndOfLine : MonoBehaviour
                 singingTrialGenerator.notes.IndexOf(thisNote)
                 == singingTrialGenerator.notes.Count - 1)
             {
-                singingTrialGenerator.notes.Remove(thisNote);
-                Destroy(collision.gameObject);
+                //singingTrialGenerator.notes.Remove(thisNote);
+                collision.gameObject.SetActive(false);
                 singingTrialGenerator.notesControlling.Win();
                 return;
             }
@@ -34,7 +36,13 @@ public class NotesEndOfLine : MonoBehaviour
                 _cam.Shake();
                 singingTrialGenerator.notesControlling.pointsCounter.AddPoints(-50, collision.gameObject.transform.position);
             }
-            Destroy(collision.gameObject, 0.1f);
+            _go = collision.gameObject;
+            Invoke("Deactive", .1f);
         }
+    }
+
+    private void Deactive()
+    {
+        _go.SetActive(false);
     }
 }
