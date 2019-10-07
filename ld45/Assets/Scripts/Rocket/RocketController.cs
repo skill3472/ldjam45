@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class RocketController : MonoBehaviour
 {
+    [SerializeField]
+    AudioSource src;
     Animator animator;
     [SerializeField]
     private GameObject laser,exp;
@@ -40,7 +42,8 @@ public class RocketController : MonoBehaviour
     IEnumerator landing()
     {
         rb2d.AddForce(new Vector2(0,99));
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Singing");
     }
     IEnumerator ded()
     {
@@ -58,6 +61,7 @@ public class RocketController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         if(isShooting)
         {
+            src.Play();
             ammo--;
             GameObject newLaser=Instantiate(laser);
             newLaser.GetComponent<Rigidbody2D>().AddForce(new Vector2(0,12));
