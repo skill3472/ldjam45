@@ -50,6 +50,7 @@ public class Plant : MonoBehaviour
             _plantsWateringManager._cam.Shake();
             _plantsWateringManager.pointsCounter.AddPoints(-80, transform.position);
             FindObjectOfType<AudioManager>().Play("TooMuchWater" + Random.Range(1,3));
+            Camera.main.GetComponent<CameaBahaviourHandler>().MakePointsEffect("Too much water!", transform.position);
         }
         if (isDone) return;
 
