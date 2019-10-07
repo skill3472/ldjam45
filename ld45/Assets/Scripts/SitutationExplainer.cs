@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SitutationExplainer : MonoBehaviour
 {
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Music", true);
+        InvokeRepeating("Music", 2f, 1);
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -13,5 +18,10 @@ public class SitutationExplainer : MonoBehaviour
     private void GoNext()
     {
         Camera.main.GetComponent<CameaBahaviourHandler>().FadeOut();
+    }
+
+    private void Music()
+    {
+        FindObjectOfType<AudioManager>().Play("Music", true);
     }
 }
