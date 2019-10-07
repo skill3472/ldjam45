@@ -22,6 +22,7 @@ public class NotesControlling : MonoBehaviour
     private void Start()
     {
         FindObjectOfType<AudioManager>().Play("Presplash");
+        Cursor.visible = true;
     }
 
     private void Update()

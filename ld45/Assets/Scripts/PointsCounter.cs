@@ -10,7 +10,7 @@ public class PointsCounter : MonoBehaviour
     public static int maxCombo = 8;
 
     public static Text pointsText;
-    public string prefixOfText;
+    public string prefixOfText = "   Points:";
 
     void Start()
     {

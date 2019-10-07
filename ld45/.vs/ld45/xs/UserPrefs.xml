@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{D0F7290E-617F-C7E7-CB70-69F69F50C4F7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/meditating/meditating.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Singing/NotesControlling.cs">
     <Files>
       <File FileName="Assets/Scripts/Singing/NotesEndOfLine.cs" Line="26" Column="19" />
-      <File FileName="Assets/Scripts/PointsCounter.cs" Line="24" Column="20" />
+      <File FileName="Assets/Scripts/PointsCounter.cs" Line="13" Column="46" />
       <File FileName="Assets/Scripts/Intro.cs" Line="19" Column="32" />
       <File FileName="Assets/Scripts/CameaBahaviourHandler.cs" Line="42" Column="33" />
       <File FileName="Assets/Scripts/SitutationExplainer.cs" Line="11" Column="31" />
@@ -12,10 +12,13 @@
       <File FileName="Assets/Scripts/Rocket/GmRocket.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/Rocket/Asteroid.cs" Line="20" Column="59" />
       <File FileName="Assets/Scripts/Rocket/Battery.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Rocket/RocketController.cs" Line="43" Column="62" />
+      <File FileName="Assets/Scripts/Rocket/RocketController.cs" Line="100" Column="138" />
       <File FileName="Assets/Scripts/Rocket/SpaceLayers.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/RocketPresplash.cs" Line="10" Column="24" />
-      <File FileName="Assets/Scripts/meditating/meditating.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/meditating/meditating.cs" Line="51" Column="49" />
+      <File FileName="Assets/Scripts/PointsResizer.cs" Line="11" Column="78" />
+      <File FileName="Assets/Scripts/bulletFixer.cs" Line="16" Column="93" />
+      <File FileName="Assets/Scripts/Singing/NotesControlling.cs" Line="25" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,12 +26,12 @@
           <Node name="ld45" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="meditating" expanded="True">
-                  <Node name="meditating.cs" selected="True" />
-                </Node>
+                <Node name="meditating" expanded="True" />
                 <Node name="PlantsWatering" expanded="True" />
                 <Node name="Rocket" expanded="True" />
-                <Node name="Singing" expanded="True" />
+                <Node name="Singing" expanded="True">
+                  <Node name="NotesControlling.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>

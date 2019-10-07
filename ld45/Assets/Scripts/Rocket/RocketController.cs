@@ -97,7 +97,8 @@ public class RocketController : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Shoot");
                 ammo--;
-                GameObject newLaser = Instantiate(laser);
+                GameObject newLaser = Instantiate(laser, new Vector3(transform.position.x, transform.position.y, -6), Quaternion.identity);
+                
                 newLaser.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 12));
                 newLaser.GetComponent<Rigidbody2D>().gravityScale = -8;
                 newLaser.transform.position = transform.position;

@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroScene.unity
     guid: c3500b65c40114f0db5e7db42ce8060c
-  - enabled: 1
-    path: Assets/Scenes/Rakieta2.unity
-    guid: b50566d076ebb4ddcbb91cb6db57a84f
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/PreSplashScene.unity
     guid: 1230ef72d9696474fa1ae7b1981a2b39
+  - enabled: 1
+    path: Assets/Scenes/Rakieta2.unity
+    guid: 990d50c29d5784fdb8723a8269aa1964
   - enabled: 1
     path: Assets/Scenes/Singing.unity
     guid: b2f23d49428c24e78b4381f6bf9ab138
