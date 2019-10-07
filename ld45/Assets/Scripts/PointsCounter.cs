@@ -19,9 +19,9 @@ public class PointsCounter : MonoBehaviour
         
     }
 
-    void Update()
+    public void Reset()
     {
-        
+        points = 0;
     }
 
     public void AddPoints(int amount, Vector3 pos)

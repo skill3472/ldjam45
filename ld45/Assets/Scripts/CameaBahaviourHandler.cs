@@ -31,7 +31,15 @@ public class CameaBahaviourHandler : MonoBehaviour
 
     public void ChangeScene()
     {
-        SceneManager.LoadScene(Random.Range(2, 5));
+        Debug.Log(SceneManager.GetActiveScene().buildIndex + 1);
+        if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    public void StartAgain()
+    {
+        FindObjectOfType<PointsCounter>().Reset();
+        SceneManager.LoadScene(0);
     }
 
     public void Shake()
