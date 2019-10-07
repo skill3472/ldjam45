@@ -99,7 +99,7 @@ public class meditating : MonoBehaviour
 
     public void DecreaseLives()
     {
-        FindObjectOfType<AudioManager>().Play("Whispers", true);
+        
         lives--;
         _cam.Shake();
     }
