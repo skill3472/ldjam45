@@ -48,6 +48,7 @@ public class meditating : MonoBehaviour
             {
                 FindObjectOfType<AudioManager>().Play("Start");
                 FindObjectOfType<AudioManager>().Play("Music");
+                InvokeRepeating("Music", 2f, 1);
                 InvokeRepeating("Breath", 2.0f, 1);
             }
             return;
@@ -108,6 +109,11 @@ public class meditating : MonoBehaviour
     private void Breath()
     {
         FindObjectOfType<AudioManager>().Play("Breath", true);
+    }
+
+    private void Music()
+    {
+        FindObjectOfType<AudioManager>().Play("Music", true);
     }
 
 }
